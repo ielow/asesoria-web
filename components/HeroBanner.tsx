@@ -50,9 +50,10 @@ export default function HeroBanner() {
           color="white"
           margin="none"
           style={{
-            fontSize: '3.5rem',
-            lineHeight: '1.2',
-            fontWeight: '300',
+            marginTop: '6rem',
+            fontSize: '5.5rem',
+            lineHeight: '1',
+            fontWeight: '500',
             letterSpacing: '-0.02em',
           }}
         >
@@ -65,8 +66,8 @@ export default function HeroBanner() {
           color="rgba(255, 255, 255, 0.8)"
           style={{
             maxWidth: '700px',
-            fontSize: '1.1rem',
-            lineHeight: '1.6',
+            fontSize: '1.5rem',
+            fontWeight: '500'
           }}
         >
           Estaciones de IA on-premise diseñadas a la medida de tu empresa. Instalación completa,

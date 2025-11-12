@@ -6,14 +6,20 @@ import { ReactNode } from 'react';
 const theme = {
   global: {
     colors: {
-      brand: '#4F46E5',
+      brand: '#7C3AED',
       'accent-1': '#7C3AED',
-      'accent-2': '#06B6D4',
-      focus: '#4F46E5',
+      'accent-2': '#c4b5fd',
+      focus: '#7C3AED',
     },
     font: {
-      family: 'system-ui, -apple-system, sans-serif',
+      family: "var(--font-instrument-sans), 'Instrument Sans', sans-serif",
     },
+  },
+  heading: {
+    font: {
+      family: "var(--font-league-spartan), 'League Spartan', sans-serif",
+    },
+    weight: 600,
   },
 };
 
