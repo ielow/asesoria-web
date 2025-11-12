@@ -4,23 +4,24 @@ import { Box, Heading, Card, CardBody, Text, Grid } from 'grommet';
 import { Technology, StatusGood, Support } from 'grommet-icons';
 import { useState } from 'react';
 
+//TODO: Cambiar los textos 
 const cards = [
   {
-    title: 'Innovación',
+    title: 'Costos',
     icon: <Technology size="large" color="brand" />,
-    front: 'Tecnología de vanguardia',
+    front: 'Tecnología Altos costos de soluciones empresariales',
     back: 'Implementamos las últimas tecnologías para mantener tu negocio a la vanguardia del mercado.'
   },
   {
-    title: 'Calidad',
+    title: 'Seguridad',
     icon: <StatusGood size="large" color="brand" />,
-    front: 'Excelencia garantizada',
+    front: 'Riesgos de seguridad en la nube',
     back: 'Nuestro compromiso con la calidad asegura resultados excepcionales en cada proyecto.'
   },
   {
-    title: 'Soporte',
+    title: 'Estrategias',
     icon: <Support size="large" color="brand" />,
-    front: 'Atención 24/7',
+    front: 'Falta de una estrategia para implementarla',
     back: 'Equipo dedicado disponible en todo momento para resolver tus necesidades.'
   }
 ];
@@ -59,7 +60,7 @@ export default function FlipCards() {
     <Box pad="large" background="#3a3a3a">
       <Box width="xlarge" alignSelf="center">
         <Heading level={2} textAlign="center" margin={{ bottom: 'large' }} color="white">
-          Nuestros Valores
+          La IA que necesita tu empresa, sin complicaciones.
         </Heading>
         <Grid columns={{ count: 3, size: 'auto' }} gap="medium">
           {cards.map((card, index) => (
