@@ -3,6 +3,7 @@ import { League_Spartan, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { GrommetProvider } from "@/components/GrommetProvider";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
         <GrommetProvider>
           <Navbar />
           {children}
+          <Footer />
         </GrommetProvider>
       </body>
     </html>
