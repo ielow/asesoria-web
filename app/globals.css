@@ -54,3 +54,90 @@ a:focus {
 .group:hover .group-hover\:rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* Animaciones para el Hero Banner */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-30px, 30px) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 50px) scale(1.05);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(-60px, 40px) scale(1.08) rotate(90deg);
+  }
+  50% {
+    transform: translate(40px, -40px) scale(0.95) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50px, -30px) scale(1.03) rotate(270deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.animated-blob {
+  will-change: transform, opacity;
+  animation-timing-function: ease-in-out;
+}
+
+.blob-1 {
+  animation: float 20s ease-in-out infinite, pulse 8s ease-in-out infinite;
+}
+
+.blob-2 {
+  animation: floatReverse 25s ease-in-out infinite, pulse 10s ease-in-out infinite;
+  animation-delay: 0s, 2s;
+}
+
+.blob-3 {
+  animation: float 22s ease-in-out infinite, pulse 9s ease-in-out infinite;
+  animation-delay: 5s, 4s;
+}
+
+/* Efecto hover para botones */
+.hero-button:hover,
+.nav-button:hover,
+.form-button:hover,
+.product-button:hover,
+button[type="submit"]:hover {
+  filter: drop-shadow(0 0 5px #7C3AED);
+  transform: translateY(-2px);
+}
+
+.hero-button:active,
+.nav-button:active,
+.form-button:active,
+.product-button:active,
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Transición suave para todos los botones */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover específico para botones primary de Grommet */
+button[class*="StyledButton"]:hover {
+  filter: drop-shadow(0 0 5px #7C3AED);
+}

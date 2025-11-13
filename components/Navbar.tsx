@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Header, Box, Nav, Anchor, Text, Button, Image } from 'grommet';
+import { Header, Box, Nav, Anchor, Button, Image } from 'grommet';
 
 export default function Navbar() {
   return (
@@ -56,12 +56,14 @@ export default function Navbar() {
         <Link href="/blog" style={{ textDecoration: 'none' }}>
           <Button
             label="Agenda una Demo"
+            className="nav-button"
             style={{
               color: '#252525',
               border: '2px solid #7C3AED',
               borderRadius: '30px',
               padding: '8px 24px',
               fontWeight: 'bold',
+              transition: 'all 0.3s ease',
             }}
           />
         </Link>

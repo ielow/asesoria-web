@@ -55,6 +55,10 @@ export default function ContactForm() {
                 label="Enviar Solicitud"
                 icon={<Send />}
                 reverse
+                className="form-button"
+                style={{
+                  transition: 'all 0.3s ease',
+                }}
               />
             </Box>
           </Form>

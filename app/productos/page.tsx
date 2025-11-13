@@ -43,7 +43,14 @@ export default function Productos() {
                 <Heading level={3} textAlign="center" color="brand" margin="none">
                   {producto.precio}
                 </Heading>
-                <Button primary label="Adquirir" icon={<Cart />} reverse />
+                <Button
+                  primary
+                  label="Adquirir"
+                  icon={<Cart />}
+                  reverse
+                  className="product-button"
+                  style={{ transition: 'all 0.3s ease' }}
+                />
               </CardBody>
             </Card>
           ))}

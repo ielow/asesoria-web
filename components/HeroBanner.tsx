@@ -16,34 +16,58 @@ export default function HeroBanner() {
       }}
       pad="large"
     >
-      {/* Elementos decorativos de fondo */}
-      <Box
+      {/* Elementos animados de fondo con degradados */}
+      <div
+        className="animated-blob blob-1"
         style={{
           position: 'absolute',
-          top: '20%',
-          left: '15%',
-          width: '400px',
-          height: '400px',
-          background: 'rgba(124, 58, 237, 0.15)',
-          borderRadius: '50%',
-          filter: 'blur(80px)',
-        }}
-      />
-      <Box
-        style={{
-          position: 'absolute',
-          bottom: '20%',
-          right: '10%',
+          top: '10%',
+          left: '10%',
           width: '500px',
           height: '500px',
-          background: 'rgba(124, 58, 237, 0.1)',
+          background: 'linear-gradient(135deg, #F60B4A 0%, #FF31D9 100%)',
           borderRadius: '50%',
           filter: 'blur(100px)',
         }}
       />
+      <div
+        className="animated-blob blob-2"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          right: '10%',
+          width: '600px',
+          height: '600px',
+          background: 'linear-gradient(135deg, #FF31D9 0%, #5817EF 100%)',
+          borderRadius: '50%',
+          filter: 'blur(120px)',
+        }}
+      />
+      <div
+        className="animated-blob blob-3"
+        style={{
+          position: 'absolute',
+          bottom: '10%',
+          left: '30%',
+          width: '550px',
+          height: '550px',
+          background: 'linear-gradient(135deg, #5817EF 0%, #F60B4A 100%)',
+          borderRadius: '50%',
+          filter: 'blur(110px)',
+        }}
+      />
 
-      {/* Contenedor principal */}
-      <Box align="center" gap="large" width="xlarge" style={{ maxWidth: '900px' }}>
+      {/* Contenedor principal con glassmorphism */}
+      <Box
+        align="center"
+        gap="large"
+        width="xlarge"
+        style={{
+          maxWidth: '900px',
+          position: 'relative',
+          zIndex: 10,
+        }}
+      >
         <Heading
           level={1}
           textAlign="center"
@@ -77,6 +101,7 @@ export default function HeroBanner() {
           label="Comienza aquí"
           icon={<Next />}
           reverse
+          className="hero-button"
           style={{
             background: 'transparent',
             color: 'white',
@@ -86,6 +111,7 @@ export default function HeroBanner() {
             fontSize: '1rem',
             fontWeight: '500',
             marginTop: '20px',
+            transition: 'all 0.3s ease',
           }}
         />
       </Box>
