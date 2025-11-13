@@ -99,7 +99,7 @@ export default function HeroBanner() {
         </Paragraph>
         <Button
           label="Comienza aquí"
-          icon={<Next />}
+          icon={<Next color="white" />}
           reverse
           className="hero-button"
           style={{
