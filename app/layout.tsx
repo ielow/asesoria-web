@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { League_Spartan, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { GrommetProvider } from "@/components/GrommetProvider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -28,12 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${leagueSpartan.variable} ${instrumentSans.variable}`}>
+    <html className={`${leagueSpartan.variable} ${instrumentSans.variable}`}>
       <body style={{ background: '#3a3a3a', margin: 0, padding: 0 }}>
         <GrommetProvider>
-          <Navbar />
           {children}
-          <Footer />
         </GrommetProvider>
       </body>
     </html>

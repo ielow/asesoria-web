@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "logo": "Asesor IA",
+    "capacitacion": "Capacitación",
+    "productos": "Productos",
+    "soporte": "Soporte",
+    "blog": "Blog",
+    "agendaDemo": "Agenda una Demo"
+  },
+  "hero": {
+    "titlePart1": "Potencia tu empresa con",
+    "titleHighlight": "Inteligencia Artificial",
+    "titlePart2": "propia y segura.",
+    "subtitle": "Estaciones de IA on-premise diseñadas a la medida de tu empresa. Instalación completa, soporte continuo y capacitación incluida.",
+    "cta": "Comienza aquí"
+  },
+  "values": {
+    "title": "Nuestros Valores",
+    "innovation": {
+      "title": "Innovación",
+      "front": "Tecnología de vanguardia",
+      "back": "Implementamos las últimas tecnologías para mantener tu negocio a la vanguardia del mercado."
+    },
+    "quality": {
+      "title": "Calidad",
+      "front": "Excelencia garantizada",
+      "back": "Nuestro compromiso con la calidad asegura resultados excepcionales en cada proyecto."
+    },
+    "support": {
+      "title": "Soporte",
+      "front": "Atención 24/7",
+      "back": "Equipo dedicado disponible en todo momento para resolver tus necesidades."
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones integrales para tu empresa",
+    "consulting": {
+      "title": "Consultoría",
+      "description": "Asesoramiento experto para optimizar tus procesos de negocio."
+    },
+    "development": {
+      "title": "Desarrollo",
+      "description": "Soluciones de software personalizadas para tus necesidades."
+    },
+    "training": {
+      "title": "Capacitación",
+      "description": "Programas de formación para tu equipo de trabajo."
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "description": "Soporte continuo para garantizar el funcionamiento óptimo."
+    }
+  },
+  "contact": {
+    "title": "Agenda tu Servicio",
+    "subtitle": "Completa el formulario y nos contactaremos contigo",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+52 123 456 7890",
+      "date": "Fecha de Servicio",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "submit": "Enviar Solicitud",
+      "successMessage": "¡Gracias! Nos pondremos en contacto contigo pronto."
+    }
+  },
+  "footer": {
+    "followUs": "Síguenos",
+    "privacyPolicy": "Políticas de Privacidad",
+    "aboutUs": "Quiénes Somos",
+    "services": "Servicios"
+  },
+  "pages": {
+    "productos": {
+      "title": "Productos",
+      "subtitle": "Descubre nuestras soluciones diseñadas para cada necesidad",
+      "premium": {
+        "name": "Producto Premium",
+        "description": "Solución completa para empresas grandes",
+        "price": "$999/mes"
+      },
+      "standard": {
+        "name": "Producto Estándar",
+        "description": "Ideal para medianas empresas",
+        "price": "$499/mes"
+      },
+      "basic": {
+        "name": "Producto Básico",
+        "description": "Perfecto para emprendedores",
+        "price": "$199/mes"
+      },
+      "acquire": "Adquirir"
+    },
+    "capacitacion": {
+      "title": "Capacitación",
+      "subtitle": "Programas de formación diseñados para impulsar tu carrera",
+      "webDev": {
+        "title": "Desarrollo Web Moderno",
+        "description": "Aprende las últimas tecnologías web",
+        "content": "React, Next.js, TypeScript, y más. Duración: 8 semanas."
+      },
+      "certification": {
+        "title": "Certificación Profesional",
+        "description": "Obtén certificaciones reconocidas",
+        "content": "Programas de certificación en diversas tecnologías. Duración: 12 semanas."
+      },
+      "workshops": {
+        "title": "Talleres Prácticos",
+        "description": "Experiencia práctica en proyectos reales",
+        "content": "Talleres intensivos de 2-3 días con proyectos hands-on."
+      }
+    },
+    "soporte": {
+      "title": "Soporte",
+      "subtitle": "Estamos aquí para ayudarte. Elige tu canal de soporte preferido",
+      "liveChat": {
+        "title": "Chat en Vivo",
+        "description": "Chatea con nuestro equipo en tiempo real",
+        "action": "Iniciar Chat"
+      },
+      "phone": {
+        "title": "Soporte Telefónico",
+        "description": "Llámanos al +52 123 456 7890",
+        "action": "Llamar Ahora"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Envíanos un correo a soporte@ejemplo.com",
+        "action": "Enviar Email"
+      },
+      "docs": {
+        "title": "Documentación",
+        "description": "Consulta nuestra base de conocimientos",
+        "action": "Ver Docs"
+      }
+    },
+    "servicios": {
+      "title": "Nuestra Oferta de Servicios",
+      "subtitle": "Ofrecemos una gama completa de servicios de Inteligencia Artificial para impulsar tu negocio.",
+      "aiConsulting": {
+        "title": "Consultoría en IA",
+        "description": "Asesoramiento experto para implementar soluciones de IA en tu empresa."
+      },
+      "customDev": {
+        "title": "Desarrollo Personalizado",
+        "description": "Soluciones de IA diseñadas específicamente para tus necesidades."
+      },
+      "training": {
+        "title": "Capacitación",
+        "description": "Programas de formación para tu equipo en el uso de IA."
+      },
+      "continuousSupport": {
+        "title": "Soporte Continuo",
+        "description": "Mantenimiento y soporte técnico 24/7 para tus sistemas de IA."
+      }
+    },
+    "nosotros": {
+      "title": "Quiénes Somos",
+      "intro": "Somos una empresa dedicada a proporcionar soluciones de Inteligencia Artificial on-premise diseñadas específicamente para las necesidades de tu empresa.",
+      "mission": "Nuestro equipo de expertos trabaja para garantizar que tu empresa tenga acceso a tecnología de vanguardia de manera segura y eficiente."
+    },
+    "privacidad": {
+      "title": "Políticas de Privacidad",
+      "intro": "En Asesor IA, nos comprometemos a proteger tu privacidad y la seguridad de tus datos.",
+      "dataCollection": {
+        "title": "Recopilación de Datos",
+        "content": "Recopilamos únicamente la información necesaria para proporcionar nuestros servicios."
+      },
+      "dataUsage": {
+        "title": "Uso de la Información",
+        "content": "Tu información se utiliza exclusivamente para mejorar nuestros servicios y comunicarnos contigo."
+      },
+      "security": {
+        "title": "Seguridad",
+        "content": "Implementamos medidas de seguridad robustas para proteger tu información personal."
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "readMore": "Leer más"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "nav": {
+    "logo": "AI Advisor",
+    "capacitacion": "Training",
+    "productos": "Products",
+    "soporte": "Support",
+    "blog": "Blog",
+    "agendaDemo": "Schedule a Demo"
+  },
+  "hero": {
+    "titlePart1": "Empower your business with secure and proprietary",
+    "titleHighlight": "Artificial Intelligence",
+    "titlePart2": ".",
+    "subtitle": "On-premise AI stations designed to fit your company. Complete installation, continuous support, and training included.",
+    "cta": "Get Started"
+  },
+  "values": {
+    "title": "Our Values",
+    "innovation": {
+      "title": "Innovation",
+      "front": "Cutting-edge technology",
+      "back": "We implement the latest technologies to keep your business at the forefront of the market."
+    },
+    "quality": {
+      "title": "Quality",
+      "front": "Guaranteed excellence",
+      "back": "Our commitment to quality ensures exceptional results in every project."
+    },
+    "support": {
+      "title": "Support",
+      "front": "24/7 Attention",
+      "back": "Dedicated team available at all times to solve your needs."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your business",
+    "consulting": {
+      "title": "Consulting",
+      "description": "Expert advice to optimize your business processes."
+    },
+    "development": {
+      "title": "Development",
+      "description": "Custom software solutions for your needs."
+    },
+    "training": {
+      "title": "Training",
+      "description": "Training programs for your work team."
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "Continuous support to ensure optimal operation."
+    }
+  },
+  "contact": {
+    "title": "Schedule Your Service",
+    "subtitle": "Fill out the form and we will contact you",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 123 456 7890",
+      "date": "Service Date",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Submit Request",
+      "successMessage": "Thank you! We will contact you soon."
+    }
+  },
+  "footer": {
+    "followUs": "Follow us",
+    "privacyPolicy": "Privacy Policy",
+    "aboutUs": "About Us",
+    "services": "Services"
+  },
+  "pages": {
+    "productos": {
+      "title": "Products",
+      "subtitle": "Discover our solutions designed for every need",
+      "premium": {
+        "name": "Premium Product",
+        "description": "Complete solution for large enterprises",
+        "price": "$999/month"
+      },
+      "standard": {
+        "name": "Standard Product",
+        "description": "Ideal for medium-sized businesses",
+        "price": "$499/month"
+      },
+      "basic": {
+        "name": "Basic Product",
+        "description": "Perfect for entrepreneurs",
+        "price": "$199/month"
+      },
+      "acquire": "Acquire"
+    },
+    "capacitacion": {
+      "title": "Training",
+      "subtitle": "Training programs designed to boost your career",
+      "webDev": {
+        "title": "Modern Web Development",
+        "description": "Learn the latest web technologies",
+        "content": "React, Next.js, TypeScript, and more. Duration: 8 weeks."
+      },
+      "certification": {
+        "title": "Professional Certification",
+        "description": "Get recognized certifications",
+        "content": "Certification programs in various technologies. Duration: 12 weeks."
+      },
+      "workshops": {
+        "title": "Practical Workshops",
+        "description": "Hands-on experience in real projects",
+        "content": "Intensive 2-3 day workshops with hands-on projects."
+      }
+    },
+    "soporte": {
+      "title": "Support",
+      "subtitle": "We are here to help you. Choose your preferred support channel",
+      "liveChat": {
+        "title": "Live Chat",
+        "description": "Chat with our team in real time",
+        "action": "Start Chat"
+      },
+      "phone": {
+        "title": "Phone Support",
+        "description": "Call us at +1 123 456 7890",
+        "action": "Call Now"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Send us an email at support@example.com",
+        "action": "Send Email"
+      },
+      "docs": {
+        "title": "Documentation",
+        "description": "Check our knowledge base",
+        "action": "View Docs"
+      }
+    },
+    "servicios": {
+      "title": "Our Service Offering",
+      "subtitle": "We offer a complete range of Artificial Intelligence services to boost your business.",
+      "aiConsulting": {
+        "title": "AI Consulting",
+        "description": "Expert advice to implement AI solutions in your company."
+      },
+      "customDev": {
+        "title": "Custom Development",
+        "description": "AI solutions designed specifically for your needs."
+      },
+      "training": {
+        "title": "Training",
+        "description": "Training programs for your team in AI usage."
+      },
+      "continuousSupport": {
+        "title": "Continuous Support",
+        "description": "24/7 maintenance and technical support for your AI systems."
+      }
+    },
+    "nosotros": {
+      "title": "About Us",
+      "intro": "We are a company dedicated to providing on-premise Artificial Intelligence solutions designed specifically for your company's needs.",
+      "mission": "Our team of experts works to ensure your company has access to cutting-edge technology in a secure and efficient manner."
+    },
+    "privacidad": {
+      "title": "Privacy Policy",
+      "intro": "At AI Advisor, we are committed to protecting your privacy and the security of your data.",
+      "dataCollection": {
+        "title": "Data Collection",
+        "content": "We only collect the information necessary to provide our services."
+      },
+      "dataUsage": {
+        "title": "Information Usage",
+        "content": "Your information is used exclusively to improve our services and communicate with you."
+      },
+      "security": {
+        "title": "Security",
+        "content": "We implement robust security measures to protect your personal information."
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "readMore": "Read more"
+    }
+  }
+}
