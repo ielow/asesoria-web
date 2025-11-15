@@ -34,7 +34,7 @@ export default function BlogList({ posts }: BlogListProps) {
                   </Text>
                   <Text color="dark-2">{post.excerpt}</Text>
                   <Box direction="row" gap="small" align="center" margin={{ top: 'small' }}>
-                    <Anchor label="Leer más" color="brand" icon={<Next />} reverse />
+                    <span>Leer mas</span>
                   </Box>
                 </CardBody>
               </Card>
