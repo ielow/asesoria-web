@@ -2,6 +2,7 @@
 
 import { Box, Heading, Card, CardBody, Text, Grid } from 'grommet';
 import { Technology, StatusGood, Support } from 'grommet-icons';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 //TODO: Cambiar los textos 
@@ -56,11 +57,12 @@ function FlipCard({ card }: { card: typeof cards[0] }) {
 }
 
 export default function FlipCards() {
+  const t = useTranslations('flipCard')
   return (
     <Box pad="large" background="#3a3a3a">
       <Box width="xlarge" alignSelf="center">
         <Heading level={2} textAlign="center" margin={{ bottom: 'large' }} color="white">
-          La IA que necesita tu empresa, sin complicaciones.
+          {t('title')}
         </Heading>
         <Grid columns={{ count: 3, size: 'auto' }} gap="medium">
           {cards.map((card, index) => (
