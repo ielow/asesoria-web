@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Heading, Text, Paragraph } from 'grommet';
+import { Box, Heading, Text, Paragraph, Image } from 'grommet';
 import { useTranslations } from 'next-intl';
 import { Analytics, ServerCluster, Workshop, Configure } from 'grommet-icons';
 import { ReactNode } from 'react';
@@ -42,8 +42,7 @@ export default function ServicesSection() {
       <Box width="xlarge" alignSelf="center">
         {/* Main Title */}
         <Heading 
-          level={2} 
-          textAlign="center" 
+          level={1} 
           margin={{ bottom: 'xlarge' }} 
           color="white"
           style={{ fontSize: '2.5rem' }}
@@ -65,14 +64,11 @@ export default function ServicesSection() {
             {/* Image/Icon Side */}
             <Box
               width="50%"
-              align="center"
-              justify="center"
-              background="rgba(124, 58, 237, 0.1)"
-              round="medium"
-              pad="xlarge"
-              style={{ minHeight: '300px' }}
+              pad="small"
+              background={"#fefefe"}
+              round={"5px"}
             >
-              {service.icon}
+              <Image src={`${service.key}.png`}  sizes='large'/>
             </Box>
 
             {/* Content Side */}
