@@ -36,23 +36,26 @@
     }
   },
   "services": {
-    "title": "Nuestros Servicios",
-    "subtitle": "Soluciones integrales para tu empresa",
+    "mainTitle": "Tu socio en inteligencia artificial",
     "consulting": {
-      "title": "Consultoría",
-      "description": "Asesoramiento experto para optimizar tus procesos de negocio."
+      "title": "Servicio de consultoría",
+      "subtitle": "Tu Estrategia de IA a Medida. sin Riesgos y Máximo retorno de inversión.",
+      "description": "Diagnóstico inicial del negocio, identificación de procesos clave para automatización y diseño del roadmap de implementación (On-Premise o híbrido)."
     },
-    "development": {
-      "title": "Desarrollo",
-      "description": "Soluciones de software personalizadas para tus necesidades."
+    "implementation": {
+      "title": "Implementación de IA en tu negocio",
+      "subtitle": "AI Stations: Servidores On-Premise para el Control Total de tu IA",
+      "description": "Venta de Equipo especializado e Implementación de un Sistema de administración de recursos y acceso a diferentes modelos de IA."
     },
     "training": {
-      "title": "Capacitación",
-      "description": "Programas de formación para tu equipo de trabajo."
+      "title": "Capacitación del personal",
+      "subtitle": "Adopción de IA: Capacitación para el Usuario y el Administrador",
+      "description": "Cursos a la medida planificados para diferentes roles, para el uso eficiente de las herramientas de IA implementadas."
     },
-    "maintenance": {
-      "title": "Mantenimiento",
-      "description": "Soporte continuo para garantizar el funcionamiento óptimo."
+    "support": {
+      "title": "Soporte y actualización",
+      "subtitle": "Soporte y Mantenimiento Continuo de tu Ecosistema de IA",
+      "description": "Seguimiento del rendimiento del sistema AI Station. Actualizaciones y mantenimiento de hardware, actualización y soporte de los diferentes modelos de IA."
     }
   },
   "contact": {

@@ -36,23 +36,26 @@
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive solutions for your business",
+    "mainTitle": "Your artificial intelligence partner",
     "consulting": {
-      "title": "Consulting",
-      "description": "Expert advice to optimize your business processes."
+      "title": "Consulting Service",
+      "subtitle": "Your Custom AI Strategy. No Risks and Maximum ROI.",
+      "description": "Initial business diagnosis, identification of key processes for automation, and implementation roadmap design (On-Premise or hybrid)."
     },
-    "development": {
-      "title": "Development",
-      "description": "Custom software solutions for your needs."
+    "implementation": {
+      "title": "AI Implementation in your business",
+      "subtitle": "AI Stations: On-Premise Servers for Total Control of your AI",
+      "description": "Sale of specialized Equipment and Implementation of a resource management System with access to different AI models."
     },
     "training": {
-      "title": "Training",
-      "description": "Training programs for your work team."
+      "title": "Staff Training",
+      "subtitle": "AI Adoption: Training for Users and Administrators",
+      "description": "Customized courses planned for different roles, for efficient use of implemented AI tools."
     },
-    "maintenance": {
-      "title": "Maintenance",
-      "description": "Continuous support to ensure optimal operation."
+    "support": {
+      "title": "Support and Updates",
+      "subtitle": "Continuous Support and Maintenance of your AI Ecosystem",
+      "description": "AI Station system performance monitoring. Hardware updates and maintenance, updates and support for different AI models."
     }
   },
   "contact": {
