@@ -1,9 +1,9 @@
 'use client';
 
-import { Box, Heading, Card, CardBody, Text, Grid } from 'grommet';
+import { Box, Heading, Text, Grid } from 'grommet';
 import { Money, Lock, Plan } from 'grommet-icons';
 import { useTranslations } from 'next-intl';
-import { useState, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 interface CardData {
   key: 'costs' | 'security' | 'strategy';
@@ -32,35 +32,49 @@ interface FlipCardProps {
 
 function FlipCard({ cardKey, icon }: FlipCardProps) {
   const t = useTranslations('values');
-  const [flipped, setFlipped] = useState(false);
 
   return (
-    <Card
-      height="medium"
-      background={flipped ? 'brand' : 'white'}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
-      elevation="medium"
-      hoverIndicator
-    >
-      <CardBody pad="large" align="center" justify="center">
-        {!flipped ? (
-          <Box align="center" gap="medium">
+    <div className="flip-card" style={{ height: '320px' }}>
+      <div className="flip-card-inner">
+        {/* Front Side */}
+        <div className="flip-card-front">
+          <Box 
+            pad="large" 
+            align="center" 
+            justify="center" 
+            gap="medium"
+            style={{ width: '100%', height: '100%' }}
+          >
             {icon}
-            <Heading level={3} margin="none">
+            <Heading 
+              level={3} 
+              margin="none" 
+              textAlign="center"
+              style={{ color: '#2e2e2e' }}
+            >
               {t(`${cardKey}.title`)}
             </Heading>
-            <Text textAlign="center" color="dark-3">
+            <Text textAlign="center" color="dark-3" size="medium">
               {t(`${cardKey}.front`)}
             </Text>
           </Box>
-        ) : (
-          <Text textAlign="center" color="white" size="medium">
-            {t(`${cardKey}.back`)}
-          </Text>
-        )}
-      </CardBody>
-    </Card>
+        </div>
+        
+        {/* Back Side */}
+        <div className="flip-card-back">
+          <Box 
+            pad="large" 
+            align="center" 
+            justify="center"
+            style={{ width: '100%', height: '100%' }}
+          >
+            <Text textAlign="center" color="white" size="medium" style={{ lineHeight: '1.6' }}>
+              {t(`${cardKey}.back`)}
+            </Text>
+          </Box>
+        </div>
+      </div>
+    </div>
   );
 }
 
