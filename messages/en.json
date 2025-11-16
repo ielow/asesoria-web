@@ -17,22 +17,22 @@
   "flipCard": {
     "title": "The AI your company need without complications"
   },
-  "values": {
-    "title": "Our Values",
-    "innovation": {
-      "title": "Innovation",
-      "front": "Cutting-edge technology",
-      "back": "We implement the latest technologies to keep your business at the forefront of the market."
+    "values": {
+    "title": "The AI Your Business Needs — Without the Hassle.",
+    "costs": {
+      "title": "High Costs",
+      "front": "Large consulting firms charge hundreds of thousands of pesos for AI projects, making the technology inaccessible for small and medium-sized businesses that cannot justify million-peso investments.",
+      "back": "We offer a scalable model designed for SMEs, with options ranging from one-time consulting to full implementations. We start with low-risk pilot projects that demonstrate fast ROI. Our flexible plans eliminate large upfront costs."
     },
-    "quality": {
-      "title": "Quality",
-      "front": "Guaranteed excellence",
-      "back": "Our commitment to quality ensures exceptional results in every project."
+    "security": {
+      "title": "Security Risks",
+      "front": "Sensitive data exposed on external servers, compromised regulatory compliance, and loss of control over critical business information when using third-party cloud solutions.",
+      "back": "With AI Station, we deploy on-premise solutions where your data never leaves your infrastructure. You maintain full control of sensitive information while meeting compliance requirements. We also offer hybrid models that combine the best of both worlds."
     },
-    "support": {
-      "title": "Support",
-      "front": "24/7 Attention",
-      "back": "Dedicated team available at all times to solve your needs."
+    "strategy": {
+      "title": "Lack of Strategy",
+      "front": "Internal teams lack technical expertise. Staff have no AI knowledge, there are no specialized technical roles, and the learning curve feels too steep to adopt these technologies.",
+      "back": "Transform your existing team into competent AI users without hiring new staff. We design role-based training: executives learn strategy, operational teams use practical tools, and technical staff handle implementation. Your current team becomes your competitive advantage."
     }
   },
   "services": {

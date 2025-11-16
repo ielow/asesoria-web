@@ -18,21 +18,21 @@
     "title": "La IA que tu empresa necesita, sin complicaciones."
   },
   "values": {
-    "title": "Nuestros Valores",
-    "innovation": {
-      "title": "Innovación",
-      "front": "Tecnología de vanguardia",
-      "back": "Implementamos las últimas tecnologías para mantener tu negocio a la vanguardia del mercado."
+     "title": "La IA que tu empresa necesita, sin complicaciones.",
+    "costs": {
+      "title": "Altos Costos",
+      "front": "Las grandes consultoras cobran cientos de miles de pesos por proyectos de IA, haciendo inaccesible la tecnología para PyMEs que no pueden justificar inversiones millonarias.",
+      "back": "Ofrecemos un modelo escalable diseñado para PyMEs con opciones desde consultoría puntual hasta implementaciones completas. Comenzamos con proyectos piloto de bajo riesgo que demuestran ROI rápido. Nuestros planes flexibles eliminan grandes desembolsos iniciales."
     },
-    "quality": {
-      "title": "Calidad",
-      "front": "Excelencia garantizada",
-      "back": "Nuestro compromiso con la calidad asegura resultados excepcionales en cada proyecto."
+    "security": {
+      "title": "Riesgos de Seguridad",
+      "front": "Datos sensibles expuestos en servidores externos, cumplimiento normativo comprometido, y pérdida de control sobre información crítica del negocio al usar soluciones cloud de terceros.",
+      "back": "Implementamos soluciones on-premise con AI Station, donde tus datos nunca salen de tu infraestructura. Mantienes control total sobre la información sensible cumpliendo normativas. También ofrecemos modelos híbridos que combinan lo mejor de ambos mundos."
     },
-    "support": {
-      "title": "Soporte",
-      "front": "Atención 24/7",
-      "back": "Equipo dedicado disponible en todo momento para resolver tus necesidades."
+    "strategy": {
+      "title": "Falta de Estrategia",
+      "front": "Falta de experiencia técnica interna. El equipo no tiene conocimientos de IA, no hay personal técnico especializado, y la curva de aprendizaje parece demasiado empinada para adoptar estas tecnologías.",
+      "back": "Convierte a tu equipo en usuarios competentes de IA sin necesidad de contratar nuevo personal. Diseñamos formación por roles: directivos aprenden estrategia, operativos usan herramientas prácticas, y técnicos manejan la implementación. Tu equipo actual se vuelve tu ventaja competitiva."
     }
   },
   "services": {
