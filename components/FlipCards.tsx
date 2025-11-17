@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Heading, Text, Grid } from 'grommet';
+import { Box, Heading, Text } from 'grommet';
 import { Money, Lock, Plan } from 'grommet-icons';
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
@@ -34,7 +34,7 @@ function FlipCard({ cardKey, icon }: FlipCardProps) {
   const t = useTranslations('values');
 
   return (
-    <div className="flip-card" style={{ height: '320px' }}>
+    <div className="flip-card" style={{ height: '450px' }}>
       <div className="flip-card-inner">
         {/* Front Side */}
         <div className="flip-card-front">
@@ -45,16 +45,18 @@ function FlipCard({ cardKey, icon }: FlipCardProps) {
             gap="medium"
             style={{ width: '100%', height: '100%' }}
           >
-            {icon}
+            <Box>
+              {icon}
+            </Box>
             <Heading 
               level={3} 
               margin="none" 
               textAlign="center"
-              style={{ color: '#2e2e2e' }}
+              style={{ color: 'white' }}
             >
               {t(`${cardKey}.title`)}
             </Heading>
-            <Text textAlign="center" color="dark-3" size="medium">
+            <Text textAlign="center" color="rgba(255, 255, 255, 0.8)" size="medium">
               {t(`${cardKey}.front`)}
             </Text>
           </Box>
@@ -82,16 +84,35 @@ export default function FlipCards() {
   const t = useTranslations('values');
   
   return (
-    <Box pad="large" background="#3a3a3a">
-      <Box width="xlarge" alignSelf="center">
-        <Heading level={2} textAlign="center" margin={{ bottom: 'large' }} color="white">
+    <Box pad="large" background="#3a3a3a" align="center">
+      <Box 
+        width="xlarge" 
+        pad="xlarge"
+        background="linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(58, 42, 82, 0.8) 100%)"
+        round="medium"
+        align="center"
+      >
+        <Heading 
+          level={2} 
+          textAlign="center" 
+          margin={{ bottom: 'large' }} 
+          color="white"
+          style={{ fontSize: '2.5rem' }}
+        >
           {t('title')}
         </Heading>
-        <Grid columns={{ count: 3, size: 'auto' }} gap="medium">
+        <Box 
+          direction="row" 
+          gap="medium" 
+          justify="center"
+          style={{ width: '100%' }}
+        >
           {cardConfigs.map((config) => (
-            <FlipCard key={config.key} cardKey={config.key} icon={config.icon} />
+            <Box key={config.key} style={{ flex: '1', maxWidth: '350px' }}>
+              <FlipCard cardKey={config.key} icon={config.icon} />
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );

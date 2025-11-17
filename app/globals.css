@@ -59,6 +59,7 @@ a:focus {
 .flip-card {
   perspective: 1000px;
   height: 100%;
+  width: 100%;
 }
 
 .flip-card-inner {
@@ -80,25 +81,30 @@ a:focus {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 8px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .flip-card-front {
-  background: white;
+  background: rgba(30, 0, 66, 0.2);
   z-index: 2;
   transform: rotateY(0deg);
 }
 
 .flip-card-back {
-  background: #7C3AED;
+  background: rgb(30, 0, 66);
   transform: rotateY(180deg);
 }
 
 .flip-card-front h3 {
-  color: #2e2e2e;
+  color: white;
+}
+
+.flip-card-front p,
+.flip-card-front span {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Animaciones para el Hero Banner */
