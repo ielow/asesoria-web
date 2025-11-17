@@ -1,9 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { Header, Box, Nav, Anchor, Button, Image } from 'grommet';
+import { useTranslations } from 'next-intl';
 
 export default function Navbar() {
+  const t = useTranslations('nav');
   return (
     <Header
       background="rgba(255, 255, 255, 0.9)"
@@ -34,28 +36,43 @@ export default function Navbar() {
           </Box>
         </Link>
       </Box>
-      <Nav direction="row" gap="small" align="center">
-        <Anchor
-          as={Link}
-          href="/capacitacion"
-          label="Capacitación"
-          style={{ color: '#252525' }}
-        />
-        <Anchor
-          as={Link}
-          href="/productos"
-          label="Productos"
-          style={{ color: '#252525'}}
-        />
-        <Anchor
-          as={Link}
-          href="/soporte"
-          label="Soporte"
-          style={{ color: '#252525'}}
-        />
+      <Nav direction="row" gap="medium" align="center">
+        <Link 
+          href="/capacitacion" 
+          style={{ 
+            textDecoration: 'none',
+            color: '#252525',
+            fontSize: '16px',
+            fontWeight: '500'
+          }}
+        >
+          {t('capacitacion')}
+        </Link>
+        <Link 
+          href="/productos" 
+          style={{ 
+            textDecoration: 'none',
+            color: '#252525',
+            fontSize: '16px',
+            fontWeight: '500'
+          }}
+        >
+          {t('productos')}
+        </Link>
+        <Link 
+          href="/soporte" 
+          style={{ 
+            textDecoration: 'none',
+            color: '#252525',
+            fontSize: '16px',
+            fontWeight: '500'
+          }}
+        >
+          {t('soporte')}
+        </Link>
         <Link href="/blog" style={{ textDecoration: 'none' }}>
           <Button
-            label="Agenda una Demo"
+            label={t('agendaDemo')}
             className="nav-button"
             style={{
               color: '#252525',

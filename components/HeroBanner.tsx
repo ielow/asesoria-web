@@ -2,8 +2,10 @@
 
 import { Box, Heading, Paragraph, Button } from 'grommet';
 import { Next } from 'grommet-icons';
+import { useTranslations } from 'next-intl';
 
 export default function HeroBanner() {
+  const t = useTranslations('hero');
   return (
     <Box
       height="100vh"
@@ -81,8 +83,9 @@ export default function HeroBanner() {
             letterSpacing: '-0.02em',
           }}
         >
-          Potencia tu empresa con{' '}
-          <span style={{ color: '#c4b5fd' }}>Inteligencia Artificial</span> propia y segura.
+          {t('titlePart1')}{' '}
+          <span style={{ color: '#c4b5fd' }}>{t('titleHighlight')}</span>{' '}
+          {t('titlePart2')}
         </Heading>
         <Paragraph
           size="large"
@@ -94,11 +97,10 @@ export default function HeroBanner() {
             fontWeight: '500'
           }}
         >
-          Estaciones de IA on-premise diseñadas a la medida de tu empresa. Instalación completa,
-          soporte continuo y capacitación incluida.
+          {t('subtitle')}
         </Paragraph>
         <Button
-          label="Comienza aquí"
+          label={t('cta')}
           icon={<Next color="white" />}
           reverse
           className="hero-button"

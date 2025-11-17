@@ -55,6 +55,58 @@ a:focus {
   transform: rotateY(180deg);
 }
 
+/* Flip Card 3D Animation */
+.flip-card {
+  perspective: 1000px;
+  height: 100%;
+  width: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front {
+  background: rgba(30, 0, 66, 0.2);
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background: rgb(30, 0, 66);
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h3 {
+  color: white;
+}
+
+.flip-card-front p,
+.flip-card-front span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* Animaciones para el Hero Banner */
 @keyframes float {
   0%, 100% {

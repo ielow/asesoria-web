@@ -1,72 +1,118 @@
 'use client';
 
-import { Box, Heading, Card, CardBody, Text, Grid } from 'grommet';
-import { Technology, StatusGood, Support } from 'grommet-icons';
-import { useState } from 'react';
+import { Box, Heading, Text } from 'grommet';
+import { Money, Lock, Plan } from 'grommet-icons';
+import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
 
-//TODO: Cambiar los textos 
-const cards = [
+interface CardData {
+  key: 'costs' | 'security' | 'strategy';
+  icon: ReactNode;
+}
+
+const cardConfigs: CardData[] = [
   {
-    title: 'Costos',
-    icon: <Technology size="large" color="brand" />,
-    front: 'Tecnología Altos costos de soluciones empresariales',
-    back: 'Implementamos las últimas tecnologías para mantener tu negocio a la vanguardia del mercado.'
+    key: 'costs',
+    icon: <Money size="large" color="brand" />
   },
   {
-    title: 'Seguridad',
-    icon: <StatusGood size="large" color="brand" />,
-    front: 'Riesgos de seguridad en la nube',
-    back: 'Nuestro compromiso con la calidad asegura resultados excepcionales en cada proyecto.'
+    key: 'security',
+    icon: <Lock size="large" color="brand" />
   },
   {
-    title: 'Estrategias',
-    icon: <Support size="large" color="brand" />,
-    front: 'Falta de una estrategia para implementarla',
-    back: 'Equipo dedicado disponible en todo momento para resolver tus necesidades.'
+    key: 'strategy',
+    icon: <Plan size="large" color="brand" />
   }
 ];
 
-function FlipCard({ card }: { card: typeof cards[0] }) {
-  const [flipped, setFlipped] = useState(false);
+interface FlipCardProps {
+  cardKey: 'costs' | 'security' | 'strategy';
+  icon: ReactNode;
+}
+
+function FlipCard({ cardKey, icon }: FlipCardProps) {
+  const t = useTranslations('values');
 
   return (
-    <Card
-      height="medium"
-      background={flipped ? 'brand' : 'white'}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
-      elevation="medium"
-      hoverIndicator
-    >
-      <CardBody pad="large" align="center" justify="center">
-        {!flipped ? (
-          <Box align="center" gap="medium">
-            {card.icon}
-            <Heading level={3} margin="none">{card.title}</Heading>
-            <Text textAlign="center" color="dark-3">{card.front}</Text>
+    <div className="flip-card" style={{ height: '450px' }}>
+      <div className="flip-card-inner">
+        {/* Front Side */}
+        <div className="flip-card-front">
+          <Box 
+            pad="large" 
+            align="center" 
+            justify="center" 
+            gap="medium"
+            style={{ width: '100%', height: '100%' }}
+          >
+            <Box>
+              {icon}
+            </Box>
+            <Heading 
+              level={3} 
+              margin="none" 
+              textAlign="center"
+              style={{ color: 'white' }}
+            >
+              {t(`${cardKey}.title`)}
+            </Heading>
+            <Text textAlign="center" color="rgba(255, 255, 255, 0.8)" size="medium">
+              {t(`${cardKey}.front`)}
+            </Text>
           </Box>
-        ) : (
-          <Text textAlign="center" color="white" size="large">
-            {card.back}
-          </Text>
-        )}
-      </CardBody>
-    </Card>
+        </div>
+        
+        {/* Back Side */}
+        <div className="flip-card-back">
+          <Box 
+            pad="large" 
+            align="center" 
+            justify="center"
+            style={{ width: '100%', height: '100%' }}
+          >
+            <Text textAlign="center" color="white" size="medium" style={{ lineHeight: '1.6' }}>
+              {t(`${cardKey}.back`)}
+            </Text>
+          </Box>
+        </div>
+      </div>
+    </div>
   );
 }
 
 export default function FlipCards() {
+  const t = useTranslations('values');
+  
   return (
-    <Box pad="large" background="#3a3a3a">
-      <Box width="xlarge" alignSelf="center">
-        <Heading level={2} textAlign="center" margin={{ bottom: 'large' }} color="white">
-          La IA que necesita tu empresa, sin complicaciones.
+    <Box pad="large" background="#3a3a3a" align="center">
+      <Box 
+        width="xlarge" 
+        pad="xlarge"
+        background="linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(58, 42, 82, 0.8) 100%)"
+        round="medium"
+        align="center"
+      >
+        <Heading 
+          level={2} 
+          textAlign="center" 
+          margin={{ bottom: 'large' }} 
+          color="white"
+          style={{ fontSize: '2.5rem' }}
+        >
+          {t('title')}
         </Heading>
-        <Grid columns={{ count: 3, size: 'auto' }} gap="medium">
-          {cards.map((card, index) => (
-            <FlipCard key={index} card={card} />
+        <Box 
+          direction="row" 
+          gap="medium" 
+          justify="center"
+          style={{ width: '100%' }}
+        >
+          {cardConfigs.map((config) => (
+            <Box key={config.key} style={{ flex: '1', maxWidth: '350px' }}>
+              <FlipCard cardKey={config.key} icon={config.icon} />
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );

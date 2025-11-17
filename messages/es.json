@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "logo": "Asesoria",
+    "capacitacion": "Capacitación",
+    "productos": "Productos",
+    "soporte": "Soporte",
+    "blog": "Blog",
+    "agendaDemo": "Agenda una Demo"
+  },
+  "hero": {
+    "titlePart1": "Potencia tu empresa con",
+    "titleHighlight": "Inteligencia Artificial",
+    "titlePart2": "propia y segura.",
+    "subtitle": "Consultoría estratégica en Inteligencia Artificial, de la estrategia a la implementación, te acompañamos en cada paso hacia la transformación digital de tu empresa.",
+    "cta": "Comienza aquí"
+  },
+  "flipCard": {
+    "title": "La IA que tu empresa necesita, sin complicaciones."
+  },
+  "values": {
+     "title": "La IA que tu empresa necesita, sin complicaciones.",
+    "costs": {
+      "title": "Altos Costos",
+      "front": "Las grandes consultoras cobran cientos de miles de pesos por proyectos de IA, haciendo inaccesible la tecnología para PyMEs que no pueden justificar inversiones millonarias.",
+      "back": "Ofrecemos un modelo escalable diseñado para PyMEs con opciones desde consultoría puntual hasta implementaciones completas. Comenzamos con proyectos piloto de bajo riesgo que demuestran ROI rápido. Nuestros planes flexibles eliminan grandes desembolsos iniciales."
+    },
+    "security": {
+      "title": "Riesgos de Seguridad",
+      "front": "Datos sensibles expuestos en servidores externos, cumplimiento normativo comprometido, y pérdida de control sobre información crítica del negocio al usar soluciones cloud de terceros.",
+      "back": "Implementamos soluciones on-premise con AI Station, donde tus datos nunca salen de tu infraestructura. Mantienes control total sobre la información sensible cumpliendo normativas. También ofrecemos modelos híbridos que combinan lo mejor de ambos mundos."
+    },
+    "strategy": {
+      "title": "Falta de Estrategia",
+      "front": "Falta de experiencia técnica interna. El equipo no tiene conocimientos de IA, no hay personal técnico especializado, y la curva de aprendizaje parece demasiado empinada para adoptar estas tecnologías.",
+      "back": "Convierte a tu equipo en usuarios competentes de IA sin necesidad de contratar nuevo personal. Diseñamos formación por roles: directivos aprenden estrategia, operativos usan herramientas prácticas, y técnicos manejan la implementación. Tu equipo actual se vuelve tu ventaja competitiva."
+    }
+  },
+  "services": {
+    "mainTitle": "Tu socio en inteligencia artificial",
+    "consulting": {
+      "title": "Servicio de consultoría",
+      "subtitle": "Tu Estrategia de IA a Medida. sin Riesgos y Máximo retorno de inversión.",
+      "description": "Diagnóstico inicial del negocio, identificación de procesos clave para automatización y diseño del roadmap de implementación (On-Premise o híbrido)."
+    },
+    "implementation": {
+      "title": "Implementación de IA en tu negocio",
+      "subtitle": "AI Stations: Servidores On-Premise para el Control Total de tu IA",
+      "description": "Venta de Equipo especializado e Implementación de un Sistema de administración de recursos y acceso a diferentes modelos de IA."
+    },
+    "training": {
+      "title": "Capacitación del personal",
+      "subtitle": "Adopción de IA: Capacitación para el Usuario y el Administrador",
+      "description": "Cursos a la medida planificados para diferentes roles, para el uso eficiente de las herramientas de IA implementadas."
+    },
+    "support": {
+      "title": "Soporte y actualización",
+      "subtitle": "Soporte y Mantenimiento Continuo de tu Ecosistema de IA",
+      "description": "Seguimiento del rendimiento del sistema AI Station. Actualizaciones y mantenimiento de hardware, actualización y soporte de los diferentes modelos de IA."
+    }
+  },
+  "contact": {
+    "title": "Agenda tu Servicio",
+    "subtitle": "Completa el formulario y nos contactaremos contigo",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+52 123 456 7890",
+      "date": "Fecha de Servicio",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "submit": "Enviar Solicitud",
+      "successMessage": "¡Gracias! Nos pondremos en contacto contigo pronto."
+    }
+  },
+  "footer": {
+    "followUs": "Síguenos",
+    "privacyPolicy": "Políticas de Privacidad",
+    "aboutUs": "Quiénes Somos",
+    "services": "Servicios"
+  },
+  "pages": {
+    "productos": {
+      "title": "Productos",
+      "subtitle": "Descubre nuestras soluciones diseñadas para cada necesidad",
+      "premium": {
+        "name": "Producto Premium",
+        "description": "Solución completa para empresas grandes",
+        "price": "$999/mes"
+      },
+      "standard": {
+        "name": "Producto Estándar",
+        "description": "Ideal para medianas empresas",
+        "price": "$499/mes"
+      },
+      "basic": {
+        "name": "Producto Básico",
+        "description": "Perfecto para emprendedores",
+        "price": "$199/mes"
+      },
+      "acquire": "Adquirir"
+    },
+    "capacitacion": {
+      "title": "Capacitación",
+      "subtitle": "Programas de formación diseñados para impulsar tu carrera",
+      "webDev": {
+        "title": "Desarrollo Web Moderno",
+        "description": "Aprende las últimas tecnologías web",
+        "content": "React, Next.js, TypeScript, y más. Duración: 8 semanas."
+      },
+      "certification": {
+        "title": "Certificación Profesional",
+        "description": "Obtén certificaciones reconocidas",
+        "content": "Programas de certificación en diversas tecnologías. Duración: 12 semanas."
+      },
+      "workshops": {
+        "title": "Talleres Prácticos",
+        "description": "Experiencia práctica en proyectos reales",
+        "content": "Talleres intensivos de 2-3 días con proyectos hands-on."
+      }
+    },
+    "soporte": {
+      "title": "Soporte",
+      "subtitle": "Estamos aquí para ayudarte. Elige tu canal de soporte preferido",
+      "liveChat": {
+        "title": "Chat en Vivo",
+        "description": "Chatea con nuestro equipo en tiempo real",
+        "action": "Iniciar Chat"
+      },
+      "phone": {
+        "title": "Soporte Telefónico",
+        "description": "Llámanos al +52 123 456 7890",
+        "action": "Llamar Ahora"
+      },
+      "email": {
+        "title": "Email",
+        "description": "Envíanos un correo a soporte@ejemplo.com",
+        "action": "Enviar Email"
+      },
+      "docs": {
+        "title": "Documentación",
+        "description": "Consulta nuestra base de conocimientos",
+        "action": "Ver Docs"
+      }
+    },
+    "servicios": {
+      "title": "Nuestra Oferta de Servicios",
+      "subtitle": "Ofrecemos una gama completa de servicios de Inteligencia Artificial para impulsar tu negocio.",
+      "aiConsulting": {
+        "title": "Consultoría en IA",
+        "description": "Asesoramiento experto para implementar soluciones de IA en tu empresa."
+      },
+      "customDev": {
+        "title": "Desarrollo Personalizado",
+        "description": "Soluciones de IA diseñadas específicamente para tus necesidades."
+      },
+      "training": {
+        "title": "Capacitación",
+        "description": "Programas de formación para tu equipo en el uso de IA."
+      },
+      "continuousSupport": {
+        "title": "Soporte Continuo",
+        "description": "Mantenimiento y soporte técnico 24/7 para tus sistemas de IA."
+      }
+    },
+    "nosotros": {
+      "title": "Quiénes Somos",
+      "intro": "Somos una empresa dedicada a proporcionar soluciones de Inteligencia Artificial on-premise diseñadas específicamente para las necesidades de tu empresa.",
+      "mission": "Nuestro equipo de expertos trabaja para garantizar que tu empresa tenga acceso a tecnología de vanguardia de manera segura y eficiente."
+    },
+    "privacidad": {
+      "title": "Políticas de Privacidad",
+      "intro": "En Asesor IA, nos comprometemos a proteger tu privacidad y la seguridad de tus datos.",
+      "dataCollection": {
+        "title": "Recopilación de Datos",
+        "content": "Recopilamos únicamente la información necesaria para proporcionar nuestros servicios."
+      },
+      "dataUsage": {
+        "title": "Uso de la Información",
+        "content": "Tu información se utiliza exclusivamente para mejorar nuestros servicios y comunicarnos contigo."
+      },
+      "security": {
+        "title": "Seguridad",
+        "content": "Implementamos medidas de seguridad robustas para proteger tu información personal."
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "readMore": "Leer más"
+    }
+  }
+}
