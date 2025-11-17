@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Heading, Text, Paragraph, Image } from 'grommet';
+import { Box, Heading, Text, Paragraph } from 'grommet';
 import { useTranslations } from 'next-intl';
 import { Analytics, ServerCluster, Workshop, Configure } from 'grommet-icons';
 import { ReactNode } from 'react';
@@ -45,7 +45,7 @@ export default function ServicesSection() {
           level={1} 
           margin={{ bottom: 'xlarge' }} 
           color="white"
-          style={{ fontSize: '2.5rem' }}
+          style={{ fontSize: '3.5rem' }}
         >
           {t('mainTitle')}
         </Heading>
@@ -64,23 +64,35 @@ export default function ServicesSection() {
             {/* Image/Icon Side */}
             <Box
               width="50%"
-              pad="small"
-              background={"#fefefe"}
-              round={"5px"}
-            >
-              <Image src={`${service.key}.png`}  sizes='large'/>
-            </Box>
+              style={{
+                backgroundImage: `url(/${service.key}.png)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                borderRadius: '25px',
+                minHeight: '400px',
+                overflow: 'hidden'
+              }}
+            />
 
             {/* Content Side */}
             <Box width="50%" justify="center" gap="small">
-              <Text 
-                size="small" 
-                color="#7C3AED" 
-                weight="bold"
-                style={{ textTransform: 'uppercase', letterSpacing: '1px' }}
+              <Box
+                width="50px"
+                height="50px"
+                round="full"
+                border={{ color: '#7C3AED', size: '2px' }}
+                align="center"
+                justify="center"
+                style={{ marginBottom: '1rem' }}
               >
-                {`0${index + 1}`}
-              </Text>
+                <Text 
+                  color="white" 
+                  style={{ fontSize: '16px', fontWeight: 'normal' }}
+                >
+                  {index + 1}
+                </Text>
+              </Box>
               <Heading 
                 level={3} 
                 margin="none" 
