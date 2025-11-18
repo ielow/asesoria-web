@@ -1,12 +1,22 @@
 'use client';
 
 import { Link } from '@/i18n/routing';
-import { Header, Box, Nav, Anchor, Button, Image } from 'grommet';
+import { Header, Box, Nav, Button, Image, Layer } from 'grommet';
 import { useTranslations } from 'next-intl';
+import { PopupModal } from 'react-calendly';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const t = useTranslations('nav');
+  const [showCalendly, setShowCalendly] = useState(false);
+  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setRootElement(document.body);
+  }, []);
+  
   return (
+    <>
     <Header
       background="rgba(255, 255, 255, 0.9)"
       pad={{ horizontal: 'large', vertical: 'small' }}
@@ -70,21 +80,31 @@ export default function Navbar() {
         >
           {t('soporte')}
         </Link>
-        <Link href="/blog" style={{ textDecoration: 'none' }}>
-          <Button
-            label={t('agendaDemo')}
-            className="nav-button"
-            style={{
-              color: '#252525',
-              border: '2px solid #7C3AED',
-              borderRadius: '30px',
-              padding: '8px 24px',
-              fontWeight: 'bold',
-              transition: 'all 0.3s ease',
-            }}
-          />
-        </Link>
+        <Button
+          label={t('agendaDemo')}
+          onClick={() => setShowCalendly(true)}
+          className="nav-button"
+          style={{
+            color: '#252525',
+            border: '2px solid #7C3AED',
+            borderRadius: '30px',
+            padding: '8px 24px',
+            fontWeight: 'bold',
+            transition: 'all 0.3s ease',
+          }}
+        />
       </Nav>
     </Header>
+
+    {/* Calendly Modal */}
+    {rootElement && (
+      <PopupModal
+        url="https://calendly.com/centralia-trc/30min"
+        onModalClose={() => setShowCalendly(false)}
+        open={showCalendly}
+        rootElement={rootElement}
+      />
+    )}
+    </>
   );
 }
