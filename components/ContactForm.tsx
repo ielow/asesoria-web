@@ -128,9 +128,7 @@ export default function ContactForm() {
     if (!formData.tipoConsulta) {
       fields.tipoConsulta = 'Tipo de consulta es requerido';
     }
-    if (!formData.mensaje.trim()) {
-      fields.mensaje = 'Mensaje es requerido';
-    }
+    // Mensaje es opcional, no se valida
 
     setFieldErrors(fields);
     return Object.keys(fields).length === 0;
@@ -371,7 +369,7 @@ export default function ContactForm() {
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  {t('form.messageLabel')}
+                  {t('form.messageLabel')} <span style={{ color: '#9ca3af', fontWeight: 'normal' }}>(Opcional)</span>
                 </label>
                 <TextArea 
                   name="mensaje" 
@@ -383,11 +381,6 @@ export default function ContactForm() {
                     borderWidth: '2px'
                   }}
                 />
-                {fieldErrors.mensaje && (
-                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
-                    {fieldErrors.mensaje}
-                  </p>
-                )}
               </Box>
             </Box>
 
@@ -410,7 +403,7 @@ export default function ContactForm() {
                   color: 'white'
                 }}
               >
-                {isSubmitting ? t('form.submitting') : t('form.submitButton')}
+                {isSubmitting ? 'ENVIANDO...' : 'ENVIAR'}
               </button>
             </Box>
 
