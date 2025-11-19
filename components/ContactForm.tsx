@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 export default function ContactForm() {
   const t = useTranslations('contact');
+  const tTypes = useTranslations('contact.consultTypes');
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -17,7 +18,13 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const tiposConsulta = ['Asesoría', 'Capacitación', 'Cotización', 'Soporte Técnico', 'Otro'];
+  const tiposConsulta = [
+    tTypes('advisory'),
+    tTypes('training'),
+    tTypes('quote'),
+    tTypes('support'),
+    tTypes('other')
+  ];
 
   const handleSubmit = async (event: { value: typeof formData }) => {
     setIsSubmitting(true);
@@ -83,7 +90,7 @@ export default function ContactForm() {
               fontWeight: 'bold'
             }}
           >
-            Impulsa tu Negocio con IA
+            {t('title')}
           </Heading>
           
           <Paragraph 
@@ -101,7 +108,7 @@ export default function ContactForm() {
               size="small"
               style={{ fontStyle: 'italic' }}
             >
-              "Transformamos tu negocio con inteligencia artificial de forma práctica y efectiva"
+              "{t('quote')}"
             </Paragraph>
           </Box>
         </Box>
@@ -126,51 +133,51 @@ export default function ContactForm() {
             <Box gap="small" style={{ fontSize: '12.8px' }}>
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  Nombre Completo
+                  {t('form.nameLabel')}
                 </label>
-                <TextInput name="nombre" placeholder="Ej: Juan Pérez" style={{ fontSize: '12.8px' }} />
+                <TextInput name="nombre" placeholder={t('form.namePlaceholder')} style={{ fontSize: '12.8px' }} />
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  Correo Electrónico
+                  {t('form.emailLabel')}
                 </label>
-                <TextInput name="email" type="email" placeholder="tu@empresa.com" style={{ fontSize: '12.8px' }} />
+                <TextInput name="email" type="email" placeholder={t('form.emailPlaceholder')} style={{ fontSize: '12.8px' }} />
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  Teléfono
+                  {t('form.phoneLabel')}
                 </label>
-                <TextInput name="telefono" type="tel" placeholder="+52 123 456 7890" style={{ fontSize: '12.8px' }} />
+                <TextInput name="telefono" type="tel" placeholder={t('form.phonePlaceholder')} style={{ fontSize: '12.8px' }} />
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  Empresa
+                  {t('form.companyLabel')}
                 </label>
-                <TextInput name="empresa" placeholder="Nombre de tu empresa" style={{ fontSize: '12.8px' }} />
+                <TextInput name="empresa" placeholder={t('form.companyPlaceholder')} style={{ fontSize: '12.8px' }} />
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  ¿En qué podemos ayudarte?
+                  {t('form.consultTypeLabel')}
                 </label>
                 <Select
                   name="tipoConsulta"
                   options={tiposConsulta}
-                  placeholder="Selecciona una opción"
+                  placeholder={t('form.consultTypePlaceholder')}
                   style={{ fontSize: '12.8px' }}
                 />
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                  Cuéntanos más sobre tu proyecto
+                  {t('form.messageLabel')}
                 </label>
                 <TextArea 
                   name="mensaje" 
-                  placeholder="Describe brevemente tu necesidad o proyecto..."
+                  placeholder={t('form.messagePlaceholder')}
                   resize="vertical"
                   style={{ fontSize: '12.8px' }}
                 />
@@ -186,7 +193,7 @@ export default function ContactForm() {
                 animation="fadeIn"
               >
                 <Paragraph margin="none" color="white" textAlign="center" style={{ fontWeight: 'bold', fontSize: '12.8px' }}>
-                  ✓ ¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.
+                  {t('form.successMessage')}
                 </Paragraph>
               </Box>
             )}
@@ -200,7 +207,7 @@ export default function ContactForm() {
                 animation="fadeIn"
               >
                 <Paragraph margin="none" color="white" textAlign="center" style={{ fontSize: '12.8px' }}>
-                  ✗ Hubo un error al enviar el mensaje. Por favor intenta nuevamente.
+                  {t('form.errorMessage')}
                 </Paragraph>
               </Box>
             )}
@@ -224,7 +231,7 @@ export default function ContactForm() {
                   color: 'white'
                 }}
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                {isSubmitting ? t('form.submitting') : t('form.submitButton')}
               </button>
             </Box>
 
@@ -234,7 +241,7 @@ export default function ContactForm() {
               color: '#6b7280',
               marginTop: '12px'
             }}>
-              Al enviar este formulario, aceptas nuestra política de privacidad
+              {t('form.privacyNote')}
             </p>
           </Form>
         </Box>
