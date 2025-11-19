@@ -1,8 +1,89 @@
 'use client';
 
-import { Box, Heading, Paragraph, Form, FormField, TextInput, TextArea, Select } from 'grommet';
+import { Box, Heading, Paragraph, Form, TextInput, TextArea, Select } from 'grommet';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+// Toast Notification Component
+function ToastNotification({ 
+  message, 
+  type, 
+  onClose 
+}: { 
+  message: string; 
+  type: 'success' | 'error'; 
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 5000); // Auto-close after 5 seconds
+
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        top: '20px',
+        right: '20px',
+        zIndex: 9999,
+        minWidth: '300px',
+        maxWidth: '400px',
+        background: type === 'success' ? '#10b981' : '#ef4444',
+        color: 'white',
+        padding: '16px 20px',
+        borderRadius: '12px',
+        boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+        animation: 'slideIn 0.3s ease-out',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: '12px'
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flex: 1 }}>
+        <span style={{ fontSize: '24px' }}>
+          {type === 'success' ? '✓' : '✕'}
+        </span>
+        <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.4' }}>
+          {message}
+        </p>
+      </div>
+      <button
+        onClick={onClose}
+        style={{
+          background: 'transparent',
+          border: 'none',
+          color: 'white',
+          fontSize: '20px',
+          cursor: 'pointer',
+          padding: '4px',
+          lineHeight: '1',
+          opacity: 0.8,
+          transition: 'opacity 0.2s'
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+        onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}
+      >
+        ✕
+      </button>
+      <style jsx>{`
+        @keyframes slideIn {
+          from {
+            transform: translateX(400px);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
 
 export default function ContactForm() {
   const t = useTranslations('contact');
@@ -17,6 +98,7 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
   const tiposConsulta = [
     tTypes('advisory'),
@@ -26,7 +108,49 @@ export default function ContactForm() {
     tTypes('other')
   ];
 
+  const validateForm = () => {
+    const fields: Record<string, string> = {};
+
+    if (!formData.nombre.trim()) {
+      fields.nombre = 'Nombre es requerido';
+    }
+    if (!formData.email.trim()) {
+      fields.email = 'Email es requerido';
+    } else if (!formData.email.includes('@') || !formData.email.includes('.')) {
+      fields.email = 'Email debe contener @ y .';
+    }
+    if (!formData.telefono.trim()) {
+      fields.telefono = 'Teléfono es requerido';
+    }
+    if (!formData.empresa.trim()) {
+      fields.empresa = 'Empresa es requerida';
+    }
+    if (!formData.tipoConsulta) {
+      fields.tipoConsulta = 'Tipo de consulta es requerido';
+    }
+    if (!formData.mensaje.trim()) {
+      fields.mensaje = 'Mensaje es requerido';
+    }
+
+    setFieldErrors(fields);
+    return Object.keys(fields).length === 0;
+  };
+
+  const getBorderColor = (fieldName: string) => {
+    if (fieldErrors[fieldName]) {
+      return '#ef4444'; // rojo para error
+    }
+    if (formData[fieldName as keyof typeof formData] && !fieldErrors[fieldName]) {
+      return '#10b981'; // verde para válido
+    }
+    return '#e5e7eb'; // gris por defecto
+  };
+
   const handleSubmit = async (event: { value: typeof formData }) => {
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -41,6 +165,7 @@ export default function ContactForm() {
 
       if (response.ok) {
         setSubmitStatus('success');
+        setFieldErrors({});
         setFormData({
           nombre: '',
           email: '',
@@ -63,10 +188,20 @@ export default function ContactForm() {
   };
 
   return (
-    <Box 
-      pad={{ horizontal: 'large', vertical: 'xlarge' }} 
-      background="linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(58, 42, 82, 0.8) 100%)"
-    >
+    <>
+      {/* Toast Notification */}
+      {submitStatus && (
+        <ToastNotification
+          message={submitStatus === 'success' ? t('form.successMessage') : t('form.errorMessage')}
+          type={submitStatus}
+          onClose={() => setSubmitStatus(null)}
+        />
+      )}
+
+      <Box 
+        pad={{ horizontal: 'large', vertical: 'xlarge' }} 
+        background="linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(58, 42, 82, 0.8) 100%)"
+      >
       <Box 
         width="xlarge" 
         alignSelf="center"
@@ -135,28 +270,82 @@ export default function ContactForm() {
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
                   {t('form.nameLabel')}
                 </label>
-                <TextInput name="nombre" placeholder={t('form.namePlaceholder')} style={{ fontSize: '12.8px' }} />
+                <TextInput 
+                  name="nombre" 
+                  placeholder={t('form.namePlaceholder')} 
+                  style={{ 
+                    fontSize: '12.8px',
+                    borderColor: getBorderColor('nombre'),
+                    borderWidth: '2px'
+                  }} 
+                />
+                {fieldErrors.nombre && (
+                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    {fieldErrors.nombre}
+                  </p>
+                )}
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
                   {t('form.emailLabel')}
                 </label>
-                <TextInput name="email" type="email" placeholder={t('form.emailPlaceholder')} style={{ fontSize: '12.8px' }} />
+                <TextInput 
+                  name="email" 
+                  type="email" 
+                  placeholder={t('form.emailPlaceholder')} 
+                  style={{ 
+                    fontSize: '12.8px',
+                    borderColor: getBorderColor('email'),
+                    borderWidth: '2px'
+                  }} 
+                />
+                {fieldErrors.email && (
+                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    {fieldErrors.email}
+                  </p>
+                )}
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
                   {t('form.phoneLabel')}
                 </label>
-                <TextInput name="telefono" type="tel" placeholder={t('form.phonePlaceholder')} style={{ fontSize: '12.8px' }} />
+                <TextInput 
+                  name="telefono" 
+                  type="tel" 
+                  placeholder={t('form.phonePlaceholder')} 
+                  style={{ 
+                    fontSize: '12.8px',
+                    borderColor: getBorderColor('telefono'),
+                    borderWidth: '2px'
+                  }} 
+                />
+                {fieldErrors.telefono && (
+                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    {fieldErrors.telefono}
+                  </p>
+                )}
               </Box>
 
               <Box>
                 <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
                   {t('form.companyLabel')}
                 </label>
-                <TextInput name="empresa" placeholder={t('form.companyPlaceholder')} style={{ fontSize: '12.8px' }} />
+                <TextInput 
+                  name="empresa" 
+                  placeholder={t('form.companyPlaceholder')} 
+                  style={{ 
+                    fontSize: '12.8px',
+                    borderColor: getBorderColor('empresa'),
+                    borderWidth: '2px'
+                  }} 
+                />
+                {fieldErrors.empresa && (
+                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    {fieldErrors.empresa}
+                  </p>
+                )}
               </Box>
 
               <Box>
@@ -167,8 +356,17 @@ export default function ContactForm() {
                   name="tipoConsulta"
                   options={tiposConsulta}
                   placeholder={t('form.consultTypePlaceholder')}
-                  style={{ fontSize: '12.8px' }}
+                  style={{ 
+                    fontSize: '12.8px',
+                    borderColor: getBorderColor('tipoConsulta'),
+                    borderWidth: '2px'
+                  }}
                 />
+                {fieldErrors.tipoConsulta && (
+                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    {fieldErrors.tipoConsulta}
+                  </p>
+                )}
               </Box>
 
               <Box>
@@ -179,38 +377,19 @@ export default function ContactForm() {
                   name="mensaje" 
                   placeholder={t('form.messagePlaceholder')}
                   resize="vertical"
-                  style={{ fontSize: '12.8px' }}
+                  style={{ 
+                    fontSize: '12.8px',
+                    borderColor: getBorderColor('mensaje'),
+                    borderWidth: '2px'
+                  }}
                 />
+                {fieldErrors.mensaje && (
+                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    {fieldErrors.mensaje}
+                  </p>
+                )}
               </Box>
             </Box>
-
-            {submitStatus === 'success' && (
-              <Box 
-                background="#10b981" 
-                pad="medium" 
-                round="medium" 
-                margin={{ vertical: 'medium' }}
-                animation="fadeIn"
-              >
-                <Paragraph margin="none" color="white" textAlign="center" style={{ fontWeight: 'bold', fontSize: '12.8px' }}>
-                  {t('form.successMessage')}
-                </Paragraph>
-              </Box>
-            )}
-
-            {submitStatus === 'error' && (
-              <Box 
-                background="#ef4444" 
-                pad="medium" 
-                round="medium" 
-                margin={{ vertical: 'medium' }}
-                animation="fadeIn"
-              >
-                <Paragraph margin="none" color="white" textAlign="center" style={{ fontSize: '12.8px' }}>
-                  {t('form.errorMessage')}
-                </Paragraph>
-              </Box>
-            )}
 
             <Box margin={{ top: 'medium' }}>
               <button
@@ -247,5 +426,6 @@ export default function ContactForm() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }
