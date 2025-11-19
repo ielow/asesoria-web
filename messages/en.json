@@ -59,20 +59,34 @@
     }
   },
   "contact": {
-    "title": "Schedule Your Service",
+    "title": "Boost Your Business with AI",
     "subtitle": "Fill out the form and we will contact you",
+    "quote": "We transform your business with artificial intelligence in a practical and effective way",
     "form": {
-      "name": "Name",
-      "namePlaceholder": "Your full name",
-      "email": "Email",
-      "emailPlaceholder": "your@email.com",
-      "phone": "Phone",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "E.g: John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "phoneLabel": "Phone",
       "phonePlaceholder": "+1 123 456 7890",
-      "date": "Service Date",
-      "message": "Message",
-      "messagePlaceholder": "Tell us about your project...",
-      "submit": "Submit Request",
-      "successMessage": "Thank you! We will contact you soon."
+      "companyLabel": "Company",
+      "companyPlaceholder": "Your company name",
+      "consultTypeLabel": "How can we help you?",
+      "consultTypePlaceholder": "Select an option",
+      "messageLabel": "Tell us more about your project",
+      "messagePlaceholder": "Briefly describe your need or project...",
+      "submitButton": "Send Message",
+      "submitting": "Sending...",
+      "successMessage": "Thank you for trusting us! Your request has been received. Our team will contact you within the next 24 hours to start transforming your business.",
+      "errorMessage": "✗ There was an error sending the message. Please try again.",
+      "privacyNote": "By submitting this form, you accept our privacy policy"
+    },
+    "consultTypes": {
+      "advisory": "Advisory",
+      "training": "Training",
+      "quote": "Quote",
+      "support": "Technical Support",
+      "other": "Other"
     }
   },
   "footer": {
