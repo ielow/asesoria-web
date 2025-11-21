@@ -42,6 +42,7 @@ export default function Navbar() {
               src="/asesoria-logo.svg"
               alt="Asesor IA Logo"
               height={42}
+              style={{ height: '42px', width: 'auto' }}
             />
           </Box>
         </Link>
