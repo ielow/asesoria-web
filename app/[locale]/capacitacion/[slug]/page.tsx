@@ -1,4 +1,5 @@
 import { Box, Heading, Paragraph, Image, Button, Text } from 'grommet';
+import ContactFormCapacitacion from '@/components/ContactFormCapacitacion';
 import { getCursoBySlug, getAllCursos } from '@/lib/cursos';
 import { Link } from '@/i18n/routing';
 import { FormPrevious, Clock } from 'grommet-icons';
@@ -91,6 +92,11 @@ export default async function CursoDetail({
                             {curso.content || curso.description}
                         </ReactMarkdown>
                     </div>
+                </Box>
+
+                {/* Contact Form */}
+                <Box margin={{ top: 'large' }}>
+                    <ContactFormCapacitacion />
                 </Box>
             </Box>
         </Box>
