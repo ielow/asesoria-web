@@ -51,7 +51,7 @@ export default async function CursoDetail({
                     }}
                 >
                     <Image
-                        src={`/${curso.image}`}
+                        src={`/${curso.detailBanner}`}
                         fit="cover"
                         alt={curso.title}
                     />
