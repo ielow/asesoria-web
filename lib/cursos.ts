@@ -13,7 +13,7 @@ const cursos: Curso[] = [
     {
         slug: 'taller-ia-profesores',
         title: 'Taller de IA para Profesores: Automatiza lo Aburrido, Potencia lo Humano',
-        description: 'En este taller, transformamos la incertidumbre en confianza, dotando a tu equipo de una verdadera fluidez en Inteligencia Artificial. No queremos que los profesores memoricen botones, queremos que hablen el idioma del futuro. Pasarán de ser espectadores tecnológicos a arquitectos de su propio tiempo, integrando la IA como una extensión natural de su talento pedagógico. Les damos la estructura para innovar sin miedo.',
+        description: 'Sabemos lo valiosos que son los profesores para un colegio. Ayúdalos a recuperar el equilibrio entre vida y trabajo integrando la Inteligencia Artificial en su día a día. En este taller, transformamos la incertidumbre en confianza, dotando a tu equipo de una verdadera fluidez en Inteligencia Artificial. Pasarán de ser espectadores tecnológicos a arquitectos de su propio tiempo, integrando la IA como una extensión natural de su talento pedagógico para innovar sin miedo.',
         image: 'taller-ia-profesores.png',
         detailBanner: 'taller-ia-profesores-banner.png',
         imagePosition: 'right',

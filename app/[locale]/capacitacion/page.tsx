@@ -69,6 +69,14 @@ export default function Capacitacion() {
                 {curso.title}
               </Heading>
 
+              <Paragraph
+                color="rgba(255, 255, 255, 0.8)"
+                size="medium"
+                style={{ lineHeight: '1.3' }}
+              >
+                {curso.description}
+              </Paragraph>
+
               <Box alignSelf="start" margin={{ bottom: 'small' }}>
                 <Link href={`/capacitacion/${curso.slug}`} style={{ textDecoration: 'none' }}>
                   <Button
@@ -80,13 +88,6 @@ export default function Capacitacion() {
                 </Link>
               </Box>
 
-              <Paragraph
-                color="rgba(255, 255, 255, 0.8)"
-                size="medium"
-                style={{ lineHeight: '1.8' }}
-              >
-                {curso.description}
-              </Paragraph>
             </Box>
           </Box>
         ))}
