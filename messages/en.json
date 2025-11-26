@@ -17,7 +17,7 @@
   "flipCard": {
     "title": "The AI your company need without complications"
   },
-    "values": {
+  "values": {
     "title": "The AI Your Business Needs — Without the Hassle.",
     "costs": {
       "title": "High Costs",
@@ -93,7 +93,8 @@
     "followUs": "Follow us",
     "privacyPolicy": "Privacy Policy",
     "aboutUs": "About Us",
-    "services": "Services"
+    "services": "Services",
+    "soporte": "Support"
   },
   "pages": {
     "productos": {

@@ -18,7 +18,7 @@
     "title": "La IA que tu empresa necesita, sin complicaciones."
   },
   "values": {
-     "title": "La IA que tu empresa necesita, sin complicaciones.",
+    "title": "La IA que tu empresa necesita, sin complicaciones.",
     "costs": {
       "title": "Altos Costos",
       "front": "Las grandes consultoras cobran cientos de miles de pesos por proyectos de IA, haciendo inaccesible la tecnología para PyMEs que no pueden justificar inversiones millonarias.",
@@ -93,7 +93,8 @@
     "followUs": "Síguenos",
     "privacyPolicy": "Políticas de Privacidad",
     "aboutUs": "Quiénes Somos",
-    "services": "Servicios"
+    "services": "Servicios",
+    "soporte": "Soporte"
   },
   "pages": {
     "productos": {

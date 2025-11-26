@@ -160,6 +160,15 @@ export default function Footer() {
               {t('services')}
             </Text>
           </Link>
+          <Link href="/soporte" style={{ textDecoration: 'none' }}>
+            <Text
+              color="rgba(255, 255, 255, 0.7)"
+              size="small"
+              style={{ cursor: 'pointer' }}
+            >
+              {t('soporte')}
+            </Text>
+          </Link>
         </Box>
 
         {/* Selector de idioma - lado derecho */}
