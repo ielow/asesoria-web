@@ -1,58 +1,98 @@
-'use client';
-
-import { Box, Heading, Paragraph, Accordion, AccordionPanel, Text } from 'grommet';
-import { Book, Certificate, Workshop } from 'grommet-icons';
-
-const cursos = [
-  {
-    titulo: 'Desarrollo Web Moderno',
-    icon: <Book color="brand" />,
-    descripcion: 'Aprende las últimas tecnologías web',
-    contenido: 'React, Next.js, TypeScript, y más. Duración: 8 semanas.'
-  },
-  {
-    titulo: 'Certificación Profesional',
-    icon: <Certificate color="brand" />,
-    descripcion: 'Obtén certificaciones reconocidas',
-    contenido: 'Programas de certificación en diversas tecnologías. Duración: 12 semanas.'
-  },
-  {
-    titulo: 'Talleres Prácticos',
-    icon: <Workshop color="brand" />,
-    descripcion: 'Experiencia práctica en proyectos reales',
-    contenido: 'Talleres intensivos de 2-3 días con proyectos hands-on.'
-  }
-];
+import { Box, Heading, Paragraph, Button } from 'grommet';
+import { getAllCursos } from '@/lib/cursos';
+import { Link } from '@/i18n/routing';
 
 export default function Capacitacion() {
+  const cursos = getAllCursos();
+
   return (
-    <Box pad="large" margin={{ top: 'large' }} background="#3a3a3a" style={{ minHeight: '100vh' }}>
-      <Box width="large" alignSelf="center">
-        <Heading level={1} margin={{ bottom: 'small' }} color="white">Capacitación</Heading>
-        <Paragraph size="large" color="rgba(255, 255, 255, 0.8)" margin={{ bottom: 'large' }}>
-          Programas de formación diseñados para impulsar tu carrera
+    <Box background="#3a3a3a" style={{ minHeight: '100vh' }}>
+      <Box
+        height="35vh"
+        width="100%"
+        align="center"
+        justify="end"
+        style={{
+          background: 'linear-gradient(135deg, #FF31D9 0%, #5817EF 100%)',
+        }}
+      >
+        <Heading style={{ fontSize: '4.5rem', maxWidth: '50%', lineHeight: '1' }} margin={{ bottom: 'medium' }} level={1} color="white" >Capacitación en Inteligencia Artificial.</Heading>
+      </Box>
+
+      <Box width="large" alignSelf="center" pad={{ vertical: 'large', horizontal: 'small' }}>
+        <Heading level={2} size="large" color="white" margin={{ bottom: 'large' }}>
+          Libera el talento de tu equipo. Potencia el futuro de tu empresa.
+        </Heading>
+        <Paragraph fill size="medium" color="rgba(255, 255, 255, 0.8)" margin={{ bottom: 'medium' }}>
+          Deja que la Inteligencia Artificial se encargue de la rutina para que tus colaboradores se enfoquen en lo que ninguna máquina puede hacer: innovar y liderar.
         </Paragraph>
-        <Accordion>
-          {cursos.map((curso, index) => (
-            <AccordionPanel
-              key={index}
-              label={
-                <Box direction="row" gap="medium" align="center">
-                  {curso.icon}
-                  <Box>
-                    <Text weight="bold">{curso.titulo}</Text>
-                    <Text size="small" color="dark-3">{curso.descripcion}</Text>
-                  </Box>
-                </Box>
-              }
-            >
-              <Box pad="medium" background="light-2">
-                <Text>{curso.contenido}</Text>
+        <Paragraph fill size="medium" color="rgba(255, 255, 255, 0.8)" margin={{ bottom: 'large' }}>
+          Fortalece la competitividad de tu organización mediante la adopción de capacidades avanzadas en Inteligencia Artificial. Desarrolla profesionales preparados para mejorar la eficiencia operativa, respaldar la toma de decisiones y contribuir a la transformación digital del negocio.
+        </Paragraph>
+      </Box>
+      <Box width="large" alignSelf="center" pad={{ vertical: 'large', horizontal: 'small' }}>
+        {cursos.map((curso) => (
+          <Box
+            key={curso.slug}
+            direction="row"
+            gap="large"
+            margin={{ bottom: 'large' }}
+            style={{
+              // If imagePosition is 'right', we want the image (first child) to be on the right.
+              // row-reverse puts the first child (image) on the right.
+              flexDirection: curso.imagePosition === 'right' ? 'row-reverse' : 'row'
+            }}
+          >
+            {/* Image/Icon Side */}
+            <Box
+              width="50%"
+              style={{
+                backgroundImage: `url(/${curso.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                borderRadius: '25px',
+                minHeight: '400px',
+                overflow: 'hidden'
+              }}
+            />
+
+            {/* Content Side */}
+            <Box width="50%" justify="center" gap="small">
+
+              <Heading
+                level={3}
+                margin="none"
+                color="white"
+                style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}
+              >
+                {curso.title}
+              </Heading>
+
+              <Paragraph
+                color="rgba(255, 255, 255, 0.8)"
+                size="medium"
+                style={{ lineHeight: '1.3' }}
+              >
+                {curso.description}
+              </Paragraph>
+
+              <Box alignSelf="start" margin={{ bottom: 'small' }}>
+                <Link href={`/capacitacion/${curso.slug}`} style={{ textDecoration: 'none' }}>
+                  <Button
+                    label="Ver Detalle"
+                    primary
+                    color="#7C3AED"
+                    style={{ borderRadius: '20px', padding: '8px 20px' }}
+                  />
+                </Link>
               </Box>
-            </AccordionPanel>
-          ))}
-        </Accordion>
+
+            </Box>
+          </Box>
+        ))}
       </Box>
     </Box>
   );
 }
+
