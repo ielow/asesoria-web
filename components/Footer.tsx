@@ -1,15 +1,18 @@
 'use client';
 
-import { Box, Text, Image, Select } from 'grommet';
+import { Box, Text, Image, Select, ResponsiveContext } from 'grommet';
 import { Link } from '@/i18n/routing';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/routing';
+import { useContext } from 'react';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const size = useContext(ResponsiveContext);
+  const isMobile = size === 'small';
 
   const languageOptions = [
     { label: 'Español', value: 'es' },
@@ -21,14 +24,14 @@ export default function Footer() {
   return (
     <Box
       background="#2d2d2d"
-      pad={{ horizontal: 'large', vertical: 'medium' }}
+      pad={{ horizontal: isMobile ? 'medium' : 'large', vertical: 'medium' }}
       style={{
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
       }}
     >
       {/* Sección de redes sociales - alineada a la izquierda */}
       <Box
-        direction="row"
+        direction={isMobile ? 'column' : 'row'}
         align="center"
         pad={{ vertical: 'small' }}
         gap="medium"
@@ -115,13 +118,18 @@ export default function Footer() {
 
       {/* Sección principal del footer */}
       <Box
-        direction="row"
+        direction={isMobile ? 'column' : 'row'}
         justify="between"
         align="center"
         pad={{ vertical: 'medium' }}
+        gap={isMobile ? 'large' : 'none'}
       >
         {/* Logo y Links de navegación - lado izquierdo */}
-        <Box direction="row" gap="large" align="center">
+        <Box
+          direction={isMobile ? 'column' : 'row'}
+          gap={isMobile ? 'medium' : 'large'}
+          align="center"
+        >
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none' }}>
             <Image
@@ -133,42 +141,44 @@ export default function Footer() {
           </Link>
 
           {/* Links de navegación */}
-          <Link href="/privacidad" style={{ textDecoration: 'none' }}>
-            <Text
-              color="rgba(255, 255, 255, 0.7)"
-              size="small"
-              style={{ cursor: 'pointer' }}
-            >
-              {t('privacyPolicy')}
-            </Text>
-          </Link>
-          <Link href="/nosotros" style={{ textDecoration: 'none' }}>
-            <Text
-              color="rgba(255, 255, 255, 0.7)"
-              size="small"
-              style={{ cursor: 'pointer' }}
-            >
-              {t('aboutUs')}
-            </Text>
-          </Link>
-          <Link href="/servicios" style={{ textDecoration: 'none' }}>
-            <Text
-              color="rgba(255, 255, 255, 0.7)"
-              size="small"
-              style={{ cursor: 'pointer' }}
-            >
-              {t('services')}
-            </Text>
-          </Link>
-          <Link href="/soporte" style={{ textDecoration: 'none' }}>
-            <Text
-              color="rgba(255, 255, 255, 0.7)"
-              size="small"
-              style={{ cursor: 'pointer' }}
-            >
-              {t('soporte')}
-            </Text>
-          </Link>
+          <Box direction={isMobile ? 'column' : 'row'} gap={isMobile ? 'medium' : 'large'} align="center">
+            <Link href="/privacidad" style={{ textDecoration: 'none' }}>
+              <Text
+                color="rgba(255, 255, 255, 0.7)"
+                size="small"
+                style={{ cursor: 'pointer' }}
+              >
+                {t('privacyPolicy')}
+              </Text>
+            </Link>
+            <Link href="/nosotros" style={{ textDecoration: 'none' }}>
+              <Text
+                color="rgba(255, 255, 255, 0.7)"
+                size="small"
+                style={{ cursor: 'pointer' }}
+              >
+                {t('aboutUs')}
+              </Text>
+            </Link>
+            <Link href="/servicios" style={{ textDecoration: 'none' }}>
+              <Text
+                color="rgba(255, 255, 255, 0.7)"
+                size="small"
+                style={{ cursor: 'pointer' }}
+              >
+                {t('services')}
+              </Text>
+            </Link>
+            <Link href="/soporte" style={{ textDecoration: 'none' }}>
+              <Text
+                color="rgba(255, 255, 255, 0.7)"
+                size="small"
+                style={{ cursor: 'pointer' }}
+              >
+                {t('soporte')}
+              </Text>
+            </Link>
+          </Box>
         </Box>
 
         {/* Selector de idioma - lado derecho */}

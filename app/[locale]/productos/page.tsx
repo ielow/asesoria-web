@@ -26,9 +26,68 @@ export default function ProductsPage() {
             AI Station Su Motor de Innovación <br className="hidden md:block" /> Control Total, Cero Riesgos
           </Heading>
 
-          <Heading level={3} size="small" className="max-w-4xl mx-auto font-light text-gray-300 leading-relaxed">
-            Infraestructura escalable <span className="italic text-purple-400">On-Premise</span> de alto rendimiento diseñado para mantener sus datos privados y sus costos fijos. Desde 5 hasta más de 100 usuarios, sin curvas de aprendizaje complejas.
+          <Heading level={3} size="small" className="mx-auto font-light text-gray-300 leading-relaxed">
+            Infraestructura escalable <span className="italic text-purple-400">On-Premise</span> de alto rendimiento diseñado para mantener sus datos privados y sus costos fijos.
           </Heading>
+
+          {/* Quick View Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-12 mb-12 px-4">
+            {[
+              {
+                name: "AI Station Starter",
+                users: "5 - 20 Usuarios",
+                processor: "Ryzen 9 + Wormhole n150d",
+                image: "/ai-station-starter-v3.png",
+                color: "from-purple-500 to-blue-500",
+                textColor: "text-purple-400"
+              },
+              {
+                name: "AI Station Pro",
+                users: "20 - 50 Usuarios",
+                processor: "Ryzen 9 + Wormhole n300d",
+                image: "/ai-station-pro-v3.png",
+                color: "from-blue-500 to-cyan-500",
+                textColor: "text-blue-400"
+              },
+              {
+                name: "AI Station Premium",
+                users: "50 - 120+ Usuarios",
+                processor: "AMD EPYC + 4x Wormhole n300",
+                image: "/ai-station-premium-v3.png",
+                color: "from-indigo-500 to-purple-500",
+                textColor: "text-indigo-400"
+              }
+            ].map((product, idx) => (
+              <div key={idx} className="group relative bg-[#2a2a2a]/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-5 hover:border-gray-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className={`absolute inset-0 bg-gradient-to-r ${product.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}></div>
+
+                <div className="relative aspect-[1/1] mb-4 overflow-hidden rounded-lg bg-gray-800 border border-gray-700/50">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+
+                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">{product.name}</h3>
+
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-300 bg-gray-800/50 p-2 rounded-lg">
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    {product.users}
+                  </div>
+                  <div className={`flex items-center gap-2 text-sm ${product.textColor} font-medium bg-gray-800/50 p-2 rounded-lg border border-gray-700/50`}>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
+                    {product.processor}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-12 space-y-6 text-lg text-gray-300 max-w-4xl mx-auto text-left">
             <Paragraph fill className="text-lg">

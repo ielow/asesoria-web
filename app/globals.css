@@ -197,3 +197,32 @@ button[class*="StyledButton"]:hover {
   color: white !important;
   transform: scale(1.1);
 }
+
+/* Responsive Typography for Hero Banner */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+    margin-top: 8rem !important;
+  }
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  .hero-button {
+    font-size: 0.9rem !important;
+    padding: 10px 24px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-title {
+    font-size: 5.5rem !important;
+    margin-top: 6rem !important;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem !important;
+  }
+  .hero-button {
+    font-size: 1rem !important;
+    padding: 12px 32px !important;
+  }
+}
