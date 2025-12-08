@@ -1,22 +1,26 @@
 'use client';
 
-import { Box, Heading, Paragraph, Button } from 'grommet';
+import { Box, Heading, Paragraph, Button, ResponsiveContext } from 'grommet';
 import { Next } from 'grommet-icons';
 import { useTranslations } from 'next-intl';
+import { useContext } from 'react';
 
 export default function HeroBanner() {
   const t = useTranslations('hero');
+  const size = useContext(ResponsiveContext);
+  const isMobile = size === 'small';
+  console.log(isMobile);
   return (
     <Box
-      height="100vh"
       align="center"
       justify="center"
       style={{
+        minHeight: '100vh',
         background: '#3a3a3a',
         position: 'relative',
         overflow: 'hidden',
       }}
-      pad="large"
+      pad={isMobile ? 'medium' : 'large'}
     >
       {/* Elementos animados de fondo con degradados */}
       <div
@@ -25,8 +29,8 @@ export default function HeroBanner() {
           position: 'absolute',
           top: '10%',
           left: '10%',
-          width: '500px',
-          height: '500px',
+          width: isMobile ? '300px' : '500px',
+          height: isMobile ? '300px' : '500px',
           background: 'linear-gradient(135deg, #F60B4A 0%, #FF31D9 100%)',
           borderRadius: '50%',
           filter: 'blur(100px)',
@@ -38,8 +42,8 @@ export default function HeroBanner() {
           position: 'absolute',
           top: '50%',
           right: '10%',
-          width: '600px',
-          height: '600px',
+          width: isMobile ? '350px' : '600px',
+          height: isMobile ? '350px' : '600px',
           background: 'linear-gradient(135deg, #FF31D9 0%, #5817EF 100%)',
           borderRadius: '50%',
           filter: 'blur(120px)',
@@ -51,8 +55,8 @@ export default function HeroBanner() {
           position: 'absolute',
           bottom: '10%',
           left: '30%',
-          width: '550px',
-          height: '550px',
+          width: isMobile ? '300px' : '550px',
+          height: isMobile ? '300px' : '550px',
           background: 'linear-gradient(135deg, #5817EF 0%, #F60B4A 100%)',
           borderRadius: '50%',
           filter: 'blur(110px)',
@@ -62,9 +66,9 @@ export default function HeroBanner() {
       {/* Contenedor principal con glassmorphism */}
       <Box
         align="center"
-        gap="large"
-        width="xlarge"
+        gap={isMobile ? 'medium' : 'large'}
         style={{
+          width: '100%',
           maxWidth: '900px',
           position: 'relative',
           zIndex: 10,
@@ -75,9 +79,8 @@ export default function HeroBanner() {
           textAlign="center"
           color="white"
           margin="none"
+          className="hero-title"
           style={{
-            marginTop: '6rem',
-            fontSize: '5.5rem',
             lineHeight: '1',
             fontWeight: '500',
             letterSpacing: '-0.02em',
@@ -88,12 +91,12 @@ export default function HeroBanner() {
           {t('titlePart2')}
         </Heading>
         <Paragraph
-          size="large"
+          size={isMobile ? 'medium' : 'large'}
           textAlign="center"
           color="rgba(255, 255, 255, 0.8)"
+          className="hero-subtitle"
           style={{
             maxWidth: '700px',
-            fontSize: '1.5rem',
             fontWeight: '500'
           }}
         >
@@ -109,8 +112,6 @@ export default function HeroBanner() {
             color: 'white',
             border: '2px solid #7C3AED',
             borderRadius: '30px',
-            padding: '12px 32px',
-            fontSize: '1rem',
             fontWeight: '500',
             marginTop: '20px',
             transition: 'all 0.3s ease',
