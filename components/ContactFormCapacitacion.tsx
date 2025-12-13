@@ -1,8 +1,8 @@
 'use client';
 
-import { Box, Heading, Paragraph, Form, TextInput, TextArea, Select } from 'grommet';
+import { Box, Heading, Paragraph, Form, TextInput, TextArea, Select, ResponsiveContext } from 'grommet';
 import { useTranslations } from 'next-intl';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 // Toast Notification Component
 function ToastNotification({
@@ -86,6 +86,7 @@ function ToastNotification({
 }
 
 export default function ContactFormCapacitacion() {
+    const size = useContext(ResponsiveContext);
     const t = useTranslations('contact');
     const tTypes = useTranslations('contact.consultTypes');
     const [formData, setFormData] = useState({
@@ -189,7 +190,7 @@ export default function ContactFormCapacitacion() {
             )}
 
             <Box
-                pad={{ horizontal: 'large', vertical: 'medium' }}
+                pad={size === 'small' ? 'small' : { horizontal: 'large', vertical: 'medium' }}
                 margin={{ top: 'large' }}
                 align="center"
             >

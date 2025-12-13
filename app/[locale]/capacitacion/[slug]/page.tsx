@@ -26,21 +26,8 @@ export default async function CursoDetail({
     }
 
     return (
-        <Box background="#3a3a3a" style={{ minHeight: '100vh' }} pad="large">
-            <Box width="large" alignSelf="center" gap="medium">
-                {/* Back Button */}
-                <Box alignSelf="start" margin={{ bottom: 'small' }}>
-                    <Link href="/capacitacion">
-                        <Button
-                            icon={<FormPrevious color="white" />}
-                            label={<span style={{ color: 'white' }}>Volver</span>}
-                            plain
-                            hoverIndicator={{ color: 'rgba(255,255,255,0.1)' }}
-                            style={{ padding: '8px 16px', borderRadius: '20px' }}
-                        />
-                    </Link>
-                </Box>
-
+        <Box background="#3a3a3a" style={{ minHeight: '100vh' }} className="p-4 md:p-12">
+            <Box width={{ width: '100%', max: 'large' }} alignSelf="center" gap="medium">
                 {/* Image Header */}
                 <Box
                     height="medium"
@@ -63,7 +50,7 @@ export default async function CursoDetail({
                     level={1}
                     color="white"
                     margin={{ top: 'medium', bottom: 'small' }}
-                    style={{ fontSize: '2.5rem', lineHeight: '1.2' }}
+                    className="text-3xl md:text-5xl leading-tight font-bold"
                 >
                     {curso.title}
                 </Heading>
@@ -80,13 +67,13 @@ export default async function CursoDetail({
 
                 {/* Content */}
                 <Box margin={{ top: 'medium' }}>
-                    <div style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '1.125rem', lineHeight: '1.8' }}>
+                    <div className="text-base md:text-lg leading-relaxed text-white/90">
                         <ReactMarkdown
                             components={{
-                                p: ({ node, ...props }) => <p style={{ marginBottom: '1.5rem' }} {...props} />,
-                                ul: ({ node, ...props }) => <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }} {...props} />,
-                                li: ({ node, ...props }) => <li style={{ marginBottom: '0.5rem' }} {...props} />,
-                                strong: ({ node, ...props }) => <strong style={{ color: 'white', fontWeight: 600 }} {...props} />
+                                p: ({ node, ...props }) => <p className="mb-6" {...props} />,
+                                ul: ({ node, ...props }) => <ul className="pl-0 md:pl-4 mb-6 list-none md:list-disc" {...props} />,
+                                li: ({ node, ...props }) => <li className="mb-2" {...props} />,
+                                strong: ({ node, ...props }) => <strong className="text-white font-semibold" {...props} />
                             }}
                         >
                             {curso.content || curso.description}
@@ -99,6 +86,6 @@ export default async function CursoDetail({
                     <ContactFormCapacitacion />
                 </Box>
             </Box>
-        </Box>
+        </Box >
     );
 }
