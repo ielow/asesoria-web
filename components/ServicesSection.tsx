@@ -40,7 +40,7 @@ export default function ServicesSection() {
   const isMobile = size === 'small';
 
   return (
-    <Box pad={isMobile ? 'medium' : 'large'} background="#3a3a3a">
+    <Box id="services-section" pad={isMobile ? 'medium' : 'large'} background="#3a3a3a">
       <Box width="xlarge" alignSelf="center">
         {/* Main Title */}
         <Heading

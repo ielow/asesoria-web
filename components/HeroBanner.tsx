@@ -10,6 +10,14 @@ export default function HeroBanner() {
   const size = useContext(ResponsiveContext);
   const isMobile = size === 'small';
   console.log(isMobile);
+
+  const handleScroll = () => {
+    const element = document.getElementById('services-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Box
       align="center"
@@ -106,6 +114,7 @@ export default function HeroBanner() {
           label={t('cta')}
           icon={<Next color="white" />}
           reverse
+          onClick={handleScroll}
           className="hero-button"
           style={{
             background: 'transparent',
