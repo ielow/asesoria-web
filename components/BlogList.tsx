@@ -11,7 +11,7 @@ interface BlogListProps {
 
 export default function BlogList({ posts }: BlogListProps) {
   return (
-    <Box pad="large" margin={{ top: 'large' }} background="#3a3a3a" style={{ minHeight: '100vh' }}>
+    <Box pad="large" background="#3a3a3a" style={{ minHeight: '100vh', paddingTop: '150px' }}>
       <Box width="xlarge" alignSelf="center">
         <Heading level={1} textAlign="center" margin={{ bottom: 'large' }} color="white">
           Blog

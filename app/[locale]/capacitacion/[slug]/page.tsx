@@ -26,7 +26,7 @@ export default async function CursoDetail({
     }
 
     return (
-        <Box background="#3a3a3a" style={{ minHeight: '100vh' }} className="p-4 md:p-12">
+        <Box background="#3a3a3a" style={{ minHeight: '100vh', paddingTop: '150px' }} className="p-4 md:p-12">
             <Box width={{ width: '100%', max: 'large' }} alignSelf="center" gap="medium">
                 {/* Image Header */}
                 <Box

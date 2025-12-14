@@ -22,7 +22,7 @@ export default function ProductsPage() {
         </div>
 
         <div className="relative z-10">
-          <Heading level={2} size="large" className="mt-[100px] mb-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          <Heading level={2} size="large" className="mt-[150px] mb-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             AI Station Su Motor de Innovación <br className="hidden md:block" /> Control Total, Cero Riesgos
           </Heading>
 

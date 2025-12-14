@@ -12,12 +12,13 @@ export default function Capacitacion() {
   return (
     <Box background="#3a3a3a" style={{ minHeight: '100vh' }}>
       <Box
-        height="35vh"
         width="100%"
         align="center"
         justify="end"
         style={{
+          minHeight: '35vh',
           background: 'linear-gradient(135deg, #FF31D9 0%, #5817EF 100%)',
+          paddingTop: '150px'
         }}
       >
         <Heading

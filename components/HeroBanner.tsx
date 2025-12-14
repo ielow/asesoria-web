@@ -27,6 +27,7 @@ export default function HeroBanner() {
         background: '#3a3a3a',
         position: 'relative',
         overflow: 'hidden',
+        paddingTop: '150px',
       }}
       pad={isMobile ? 'medium' : 'large'}
     >
