@@ -32,7 +32,7 @@ const opciones = [
 
 export default function Soporte() {
   return (
-    <Box pad="large" margin={{ top: 'large' }} background="#3a3a3a" style={{ minHeight: '100vh' }}>
+    <Box pad="large" background="#3a3a3a" style={{ minHeight: '100vh', paddingTop: '150px' }}>
       <Box width="xlarge" alignSelf="center">
         <Heading level={1} margin={{ bottom: 'small' }} color="white">Soporte</Heading>
         <Paragraph size="large" color="rgba(255, 255, 255, 0.8)" margin={{ bottom: 'large' }}>

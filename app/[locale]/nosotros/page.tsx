@@ -4,7 +4,7 @@ import { Box, Heading, Paragraph } from 'grommet';
 
 export default function Nosotros() {
   return (
-    <Box pad="large" margin={{ top: 'large' }} background="#3a3a3a" style={{ minHeight: '100vh' }}>
+    <Box pad="large" background="#3a3a3a" style={{ minHeight: '100vh', paddingTop: '150px' }}>
       <Box width="large" alignSelf="center">
         <Heading level={1} margin={{ bottom: 'small' }} color="white">
           Quiénes Somos
