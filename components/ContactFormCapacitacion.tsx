@@ -1,7 +1,7 @@
 'use client';
 
-import { Box, Heading, Paragraph, Form, TextInput, TextArea, Select, ResponsiveContext } from 'grommet';
-import { useTranslations } from 'next-intl';
+import { Box, Heading, Paragraph, Form, TextInput, TextArea, Select, ResponsiveContext, CheckBox, Anchor } from 'grommet';
+import { useTranslations, useLocale } from 'next-intl';
 import { useState, useEffect, useContext } from 'react';
 
 // Toast Notification Component
@@ -87,6 +87,7 @@ function ToastNotification({
 
 export default function ContactFormCapacitacion() {
     const size = useContext(ResponsiveContext);
+    const locale = useLocale();
     const t = useTranslations('contact');
     const tTypes = useTranslations('contact.consultTypes');
     const [formData, setFormData] = useState({
@@ -94,7 +95,8 @@ export default function ContactFormCapacitacion() {
         email: '',
         telefono: '',
         empresa: '',
-        tipoConsulta: 'Capacitación'
+        tipoConsulta: 'Capacitación',
+        privacyAccepted: false
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
@@ -121,6 +123,9 @@ export default function ContactFormCapacitacion() {
         }
         if (!formData.tipoConsulta) {
             fields.tipoConsulta = 'Tipo de consulta es requerido';
+        }
+        if (!formData.privacyAccepted) {
+            fields.privacyAccepted = 'Debes aceptar la política de privacidad';
         }
         // Mensaje es opcional, no se valida
 
@@ -163,7 +168,8 @@ export default function ContactFormCapacitacion() {
                     email: '',
                     telefono: '',
                     empresa: '',
-                    tipoConsulta: 'Capacitación'
+                    tipoConsulta: 'Capacitación',
+                    privacyAccepted: false
                 });
             } else {
                 const errorData = await response.json();
@@ -307,6 +313,41 @@ export default function ContactFormCapacitacion() {
                                     </p>
                                 )}
                             </Box>
+                        </Box>
+
+                        <Box margin={{ top: 'small' }}>
+                            <Box direction="row" align="center" gap="small">
+                                <CheckBox
+                                    name="privacyAccepted"
+                                    checked={formData.privacyAccepted}
+                                    onChange={(event) => setFormData({ ...formData, privacyAccepted: event.target.checked })}
+                                    style={{ fontSize: '12.8px' }}
+                                />
+                                <span
+                                    style={{
+                                        fontSize: '12.8px',
+                                        cursor: 'pointer'
+                                    }}
+                                    onClick={() => setFormData({ ...formData, privacyAccepted: !formData.privacyAccepted })}
+                                >
+                                    {t.rich('form.privacyCheckbox', {
+                                        link: (chunks) => (
+                                            <Anchor
+                                                href={`/${locale}/privacidad`}
+                                                label="política de privacidad"
+                                                target="_blank"
+                                                color="#7C3AED"
+                                                onClick={(e) => e.stopPropagation()}
+                                            />
+                                        )
+                                    })}
+                                </span>
+                            </Box>
+                            {fieldErrors.privacyAccepted && (
+                                <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                                    {fieldErrors.privacyAccepted}
+                                </p>
+                            )}
                         </Box>
 
                         <Box margin={{ top: 'medium' }}>
