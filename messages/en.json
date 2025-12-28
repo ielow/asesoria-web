@@ -79,7 +79,8 @@
       "submitting": "Sending...",
       "successMessage": "Thank you for trusting us! Your request has been received. Our team will contact you within the next 24 hours to start transforming your business.",
       "errorMessage": "✗ There was an error sending the message. Please try again.",
-      "privacyNote": "By submitting this form, you accept our privacy policy"
+      "privacyNote": "By submitting this form, you accept our privacy policy",
+      "privacyCheckbox": "I have read and accept the <link>privacy policy</link>"
     },
     "consultTypes": {
       "advisory": "Advisory",

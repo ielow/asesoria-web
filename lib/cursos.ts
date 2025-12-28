@@ -53,6 +53,28 @@ Exploraremos cómo las herramientas de Inteligencia Artificial pueden liberarte 
     
 - **Ética en la Gestión de Talento:** Abordaremos los desafíos éticos de la IA en RRHH, asegurando prácticas justas, transparentes y libres de sesgos algorítmicos.
         `
+    },
+    {
+        slug: 'taller-ia-marketing',
+        title: 'Taller de Inteligencia Artificial para Agencias de Marketing',
+        description: 'Transforma tu agencia con el poder de la IA. Desde la generación de contenido creativo hasta el análisis predictivo de campañas, este taller potenciará la creatividad y eficiencia de tu equipo.',
+        image: 'taller-ia-marketing.png',
+        detailBanner: 'taller-ia-marketing-banner.png',
+        imagePosition: 'right',
+        duration: '120 Min',
+        content: `
+En un mundo digital saturado, la velocidad y la personalización son clave. Este taller está diseñado para agencias de marketing que quieren liderar la vanguardia tecnológica.
+
+Descubre cómo la Inteligencia Artificial puede ser el motor creativo y analítico que tu agencia necesita para escalar resultados y sorprender a tus clientes.
+
+- **Creatividad Aumentada:** Utiliza herramientas de IA Generativa para crear copy, imágenes y conceptos visuales en minutos, multiplicando la capacidad de producción de tu equipo creativo.
+    
+- **Segmentación y Personalización:** Aprende a analizar grandes volúmenes de datos para crear compañas hiper-personalizadas que resuenen con tu audiencia objetivo.
+    
+- **Automatización de Reportes:** Olvídate de las horas perdidas en hojas de cálculo. Implementa sistemas que analizan el rendimiento en tiempo real y sugieren optimizaciones automáticas.
+    
+- **Tendencias y Futuro del Marketing:** Mantente adelante de la curva entendiendo las próximas olas de innovación en IA aplicadas al marketing digital.
+        `
     }
 ];
 
