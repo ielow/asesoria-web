@@ -9,7 +9,6 @@ Las rutas en español **NO** incluyen el prefijo `/es/`:
 - ✅ `/` → Home en español
 - ✅ `/productos` → Productos en español
 - ✅ `/capacitacion` → Capacitación en español
-- ✅ `/soporte` → Soporte en español
 - ✅ `/blog` → Blog en español
 
 ### Inglés
@@ -17,7 +16,6 @@ Las rutas en inglés **SÍ** incluyen el prefijo `/en/`:
 - ✅ `/en` → Home en inglés
 - ✅ `/en/productos` → Products en inglés
 - ✅ `/en/capacitacion` → Training en inglés
-- ✅ `/en/soporte` → Support en inglés
 - ✅ `/en/blog` → Blog en inglés
 
 ## Cambio de idioma

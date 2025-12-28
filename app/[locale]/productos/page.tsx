@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Box, Heading, Paragraph, Button, Text } from 'grommet';
 import { FormNextLink } from 'grommet-icons';
+import Link from 'next/link';
 
 export default function ProductsPage() {
   return (
@@ -22,7 +23,7 @@ export default function ProductsPage() {
         </div>
 
         <div className="relative z-10">
-          <Heading level={2} size="large" className="mt-[150px] mb-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+          <Heading level={2} size="large" className="mt-[150px] mb-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center mx-auto">
             AI Station Su Motor de Innovación <br className="hidden md:block" /> Control Total, Cero Riesgos
           </Heading>
 
@@ -140,13 +141,15 @@ export default function ProductsPage() {
             <p className="text-gray-300 leading-relaxed">
               Elimine el riesgo de fuga de datos en sus operaciones diarias. Diseñada para equipos que inician su adopción de IA, garantizando privacidad <span className="italic">on-premise</span> y un ROI inmediato frente a suscripciones de nube.
             </p>
-            <Button
-              label="Ver Especificaciones Starter"
-              icon={<FormNextLink />}
-              reverse
-              className="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
-              plain
-            />
+            <Link href="/productos/ai-station-starter">
+              <Button
+                label="Ver Especificaciones Starter"
+                icon={<FormNextLink />}
+                reverse
+                className="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                plain
+              />
+            </Link>
           </div>
         </div>
 
@@ -182,13 +185,15 @@ export default function ProductsPage() {
             <p className="text-gray-300 leading-relaxed">
               Escale su capacidad operativa sin escalar sus costos. Esta estación permite el entrenamiento de modelos a la medida y uso multidepartamental, ofreciendo el equilibrio perfecto entre rendimiento dedicado y flexibilidad financiera.
             </p>
-            <Button
-              label="Ver Especificaciones Pro"
-              icon={<FormNextLink />}
-              reverse
-              className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-              plain
-            />
+            <Link href="/productos/ai-station-pro">
+              <Button
+                label="Ver Especificaciones Pro"
+                icon={<FormNextLink />}
+                reverse
+                className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+                plain
+              />
+            </Link>
           </div>
         </div>
 
@@ -224,13 +229,15 @@ export default function ProductsPage() {
             <p className="text-gray-300 leading-relaxed">
               Máximo rendimiento para innovación crítica. Centralice el control total de su infraestructura de IA con potencia de servidor, eliminando la latencia de la nube y asegurando la soberanía absoluta de sus datos más sensibles.
             </p>
-            <Button
-              label="Ver Especificaciones Premium"
-              icon={<FormNextLink />}
-              reverse
-              className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
-              plain
-            />
+            <Link href="/productos/ai-station-premium">
+              <Button
+                label="Ver Especificaciones Premium"
+                icon={<FormNextLink />}
+                reverse
+                className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
+                plain
+              />
+            </Link>
           </div>
         </div>
 

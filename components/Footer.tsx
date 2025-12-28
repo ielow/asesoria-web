@@ -151,15 +151,7 @@ export default function Footer() {
                 {t('privacyPolicy')}
               </Text>
             </Link>
-            <Link href="/nosotros" style={{ textDecoration: 'none' }}>
-              <Text
-                color="rgba(255, 255, 255, 0.7)"
-                size="small"
-                style={{ cursor: 'pointer' }}
-              >
-                {t('aboutUs')}
-              </Text>
-            </Link>
+
             <Link href="/servicios" style={{ textDecoration: 'none' }}>
               <Text
                 color="rgba(255, 255, 255, 0.7)"
@@ -167,15 +159,6 @@ export default function Footer() {
                 style={{ cursor: 'pointer' }}
               >
                 {t('services')}
-              </Text>
-            </Link>
-            <Link href="/soporte" style={{ textDecoration: 'none' }}>
-              <Text
-                color="rgba(255, 255, 255, 0.7)"
-                size="small"
-                style={{ cursor: 'pointer' }}
-              >
-                {t('soporte')}
               </Text>
             </Link>
           </Box>
