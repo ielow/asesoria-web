@@ -17,8 +17,11 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "Sitio web profesional con Next.js",
+  title: {
+    template: '%s | Asesoría IA',
+    default: 'Asesoría en Inteligencia Artificial',
+  },
+  description: "Soluciones de Inteligencia Artificial para empresas. Consultoría, capacitación, hardware y soporte especializado para su transformación digital.",
 };
 
 export default function RootLayout({
