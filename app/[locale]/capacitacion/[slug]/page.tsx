@@ -6,6 +6,26 @@ import { FormPrevious, Clock } from 'grommet-icons';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 
+import { Metadata } from 'next';
+
+export async function generateMetadata(
+    { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+    const { slug } = await params;
+    const curso = getCursoBySlug(slug);
+
+    if (!curso) {
+        return {
+            title: 'Curso no encontrado',
+        };
+    }
+
+    return {
+        title: curso.title,
+        description: curso.description,
+    };
+}
+
 export async function generateStaticParams() {
     const cursos = getAllCursos();
     return cursos.map((curso) => ({

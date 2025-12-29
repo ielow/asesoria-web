@@ -80,7 +80,7 @@
       "successMessage": "¡Gracias por confiar en nosotros! Tu solicitud ha sido recibida. Nuestro equipo se pondrá en contacto contigo en las próximas 24 horas para comenzar a transformar tu negocio.",
       "errorMessage": "✗ Hubo un error al enviar el mensaje. Por favor intenta nuevamente.",
       "privacyNote": "Al enviar este formulario, aceptas nuestra política de privacidad",
-      "privacyCheckbox": "He leído y acepto la {link}"
+      "privacyCheckbox": "He leído y acepto la <link>política de privacidad</link>"
     },
     "consultTypes": {
       "advisory": "Asesoría",

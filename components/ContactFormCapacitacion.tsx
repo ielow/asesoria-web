@@ -334,11 +334,12 @@ export default function ContactFormCapacitacion() {
                                         link: (chunks) => (
                                             <Anchor
                                                 href={`/${locale}/privacidad`}
-                                                label="política de privacidad"
                                                 target="_blank"
                                                 color="#7C3AED"
                                                 onClick={(e) => e.stopPropagation()}
-                                            />
+                                            >
+                                                {chunks}
+                                            </Anchor>
                                         )
                                     })}
                                 </span>
