@@ -1,25 +1,25 @@
 'use client';
 
-import { Box, Text, Image, Select, ResponsiveContext } from 'grommet';
+import { Box, Text, Image, /* Select, */ ResponsiveContext } from 'grommet';
 import { Link } from '@/i18n/routing';
 import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+// import { useRouter, usePathname } from '@/i18n/routing';
 import { useContext } from 'react';
 
 export default function Footer() {
   const t = useTranslations('footer');
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  // const router = useRouter();
+  // const pathname = usePathname();
   const size = useContext(ResponsiveContext);
   const isMobile = size === 'small';
 
-  const languageOptions = [
+  /* const languageOptions = [
     { label: 'Español', value: 'es' },
     { label: 'English', value: 'en' }
   ];
 
-  const currentLanguage = languageOptions.find(opt => opt.value === locale)?.label || 'Español';
+  const currentLanguage = languageOptions.find(opt => opt.value === locale)?.label || 'Español'; */
 
   return (
     <Box
@@ -38,6 +38,7 @@ export default function Footer() {
         style={{
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           paddingBottom: '20px',
+          display: 'none', // Oculto temporalmente
         }}
       >
         <Text color="rgba(255, 255, 255, 0.7)" size="small">
@@ -165,25 +166,11 @@ export default function Footer() {
         </Box>
 
         {/* Selector de idioma - lado derecho */}
+        {/* Derechos Reservados - lado derecho */}
         <Box direction="row" gap="small" align="center">
-          <Select
-            options={languageOptions.map(opt => opt.label)}
-            value={currentLanguage}
-            onChange={({ option }) => {
-              const selectedLang = languageOptions.find(opt => opt.label === option);
-              if (selectedLang) {
-                router.replace(pathname, { locale: selectedLang.value as any });
-              }
-            }}
-            style={{
-              background: 'transparent',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              borderRadius: '4px',
-              color: 'white',
-              fontSize: '14px',
-              padding: '4px 8px',
-            }}
-          />
+          <Text color="rgba(255, 255, 255, 0.5)" size="small">
+            © {new Date().getFullYear()} Derechos Reservados
+          </Text>
         </Box>
       </Box>
     </Box>
