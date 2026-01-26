@@ -51,7 +51,7 @@ export default function ProductsPage() {
                                 textColor: "text-blue-400"
                             },
                             {
-                                name: "AI Station Premium",
+                                name: "AI Station Ultra",
                                 users: "50 - 120+ Usuarios",
                                 processor: "AMD EPYC + 4x Wormhole n300",
                                 image: "/ai-station-premium-v3.png",
@@ -197,7 +197,7 @@ export default function ProductsPage() {
                     </div>
                 </div>
 
-                {/* Premium */}
+                {/* Ultra */}
                 <div className="flex flex-col md:flex-row items-center gap-12 group">
                     <div className="w-full md:w-1/2 relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -205,7 +205,7 @@ export default function ProductsPage() {
                             <div className="aspect-[4/3] relative flex items-center justify-center bg-gray-800 rounded-xl">
                                 <Image
                                     src="/ai-station-premium-v3.png"
-                                    alt="AI Station Premium"
+                                    alt="AI Station Ultra"
                                     width={600}
                                     height={450}
                                     className="object-cover rounded-xl"
@@ -218,7 +218,7 @@ export default function ProductsPage() {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 space-y-6">
-                        <h3 className="text-3xl font-bold text-white">AI Station Premium</h3>
+                        <h3 className="text-3xl font-bold text-white">AI Station Ultra</h3>
                         <div className="space-y-2">
                             <h4 className="text-xl text-indigo-400 font-semibold">Poder de Datacenter Corporativo</h4>
                             <div className="flex flex-wrap gap-4 text-sm text-gray-300">
@@ -229,9 +229,9 @@ export default function ProductsPage() {
                         <p className="text-gray-300 leading-relaxed">
                             Máximo rendimiento para innovación crítica. Centralice el control total de su infraestructura de IA con potencia de servidor, eliminando la latencia de la nube y asegurando la soberanía absoluta de sus datos más sensibles.
                         </p>
-                        <Link href="/productos/ai-station-premium">
+                        <Link href="/productos/ai-station-ultra">
                             <Button
-                                label="Ver Especificaciones Premium"
+                                label="Ver Especificaciones Ultra"
                                 icon={<FormNextLink />}
                                 reverse
                                 className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
@@ -275,6 +275,22 @@ export default function ProductsPage() {
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    <div className="mt-12 text-center">
+                        <Link href="/solicitar-cotizacion">
+                            <Button
+                                label="Solicitar Cotización"
+                                icon={<FormNextLink />}
+                                reverse
+                                primary
+                                size="large"
+                                className="bg-gradient-to-r from-purple-600 to-blue-600 border-none hover:shadow-lg hover:shadow-purple-500/30 px-12 py-4 rounded-full font-bold text-white transition-all transform hover:-translate-y-1"
+                            />
+                        </Link>
+                        <p className="mt-4 text-gray-400">
+                            Configure su estación ideal y reciba una propuesta formal en 24 horas.
+                        </p>
                     </div>
                 </div>
             </section>

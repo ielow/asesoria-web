@@ -37,7 +37,7 @@ export const products: Product[] = [
         color: "from-purple-500 to-blue-500",
         textColor: "text-purple-400",
         gradient: "from-purple-500/20 to-blue-500/20",
-        approxPrice: "Desde $5,000 USD"
+        approxPrice: "$60,000 MXN"
     },
     {
         id: 'pro',
@@ -59,12 +59,12 @@ export const products: Product[] = [
         color: "from-blue-500 to-cyan-500",
         textColor: "text-blue-400",
         gradient: "from-blue-500/20 to-cyan-500/20",
-        approxPrice: "Desde $9,500 USD"
+        approxPrice: "$80,000 MXN"
     },
     {
         id: 'premium',
-        slug: 'ai-station-premium',
-        name: "AI Station Premium",
+        slug: 'ai-station-ultra',
+        name: "AI Station Ultra",
         tagline: "Poder de Datacenter Corporativo",
         users: "50 - 120+ Usuarios",
         processor: "AMD EPYC + 4x Wormhole n300",
@@ -81,6 +81,6 @@ export const products: Product[] = [
         color: "from-indigo-500 to-purple-500",
         textColor: "text-indigo-400",
         gradient: "from-indigo-500/20 to-purple-500/20",
-        approxPrice: "Desde $18,000 USD"
+        approxPrice: "$300,000 MXN"
     }
 ];
