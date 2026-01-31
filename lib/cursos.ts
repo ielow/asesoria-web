@@ -7,9 +7,55 @@ export interface Curso {
     imagePosition?: 'left' | 'right';
     content?: string;
     duration?: string;
+    formTitle?: string;
 }
 
 const cursos: Curso[] = [
+    {
+        slug: 'taller-ia-emprendedores',
+        title: 'Taller de Inteligencia Artificial para Emprendedores',
+        description: 'Multiplica tu productividad y escala tu negocio. Aprende a usar la IA como tu socio estratégico para marketing, automatización y toma de decisiones, sin necesidad de ser un experto técnico.',
+        image: 'taller-ia-emprendedores.png',
+        detailBanner: 'taller-ia-emprendedores-banner.png',
+        imagePosition: 'right',
+        duration: '120 Min',
+        formTitle: '¿Listo para emprender con ayuda de la Inteligencia Artificial?',
+        content: `
+El mundo del emprendimiento ha cambiado. Ya no necesitas grandes equipos para competir con los gigantes; necesitas agilidad e inteligencia. Este taller está diseñado para fundadores y dueños de negocio que quieren hacer más con menos.
+
+Descubre cómo la IA se convierte en tu director de marketing, tu analista de datos y tu asistente operativo, todo al mismo tiempo.
+
+- **Tu Socio Creativo 24/7:** Aprende a usar IA para generar nombres de marca, logos, copys para redes sociales y estrategias de contenido en minutos. Elimina el bloqueo creativo para siempre.
+    
+- **Automatización de Operaciones:** Identifica tareas repetitivas en tu negocio (atención al cliente, gestión de citas, correos) y crea flujos de trabajo que funcionan mientras te enfocas en crecer.
+    
+- **Inteligencia de Mercado:** Usa herramientas de IA para investigar a tu competencia, analizar tendencias y encontrar oportunidades ocultas en tu nicho sin contratar costosas consultorías.
+    
+- **Pitch y Ventas:** Mejora tus presentaciones y perfecciona tu discurso de ventas con retroalimentación instantánea, aumentando tus probabilidades de cerrar clientes o levantar inversión.
+        `
+    },
+    {
+        slug: 'taller-ia-marketing',
+        title: 'Taller de Inteligencia Artificial para Agencias de Marketing',
+        description: 'Transforma tu agencia con el poder de la IA. Desde la generación de contenido creativo hasta el análisis predictivo de campañas, este taller potenciará la creatividad y eficiencia de tu equipo.',
+        image: 'taller-ia-marketing.png',
+        detailBanner: 'taller-ia-marketing-banner.png',
+        imagePosition: 'left',
+        duration: '120 Min',
+        content: `
+En un mundo digital saturado, la velocidad y la personalización son clave. Este taller está diseñado para agencias de marketing que quieren liderar la vanguardia tecnológica.
+
+Descubre cómo la Inteligencia Artificial puede ser el motor creativo y analítico que tu agencia necesita para escalar resultados y sorprender a tus clientes.
+
+- **Creatividad Aumentada:** Utiliza herramientas de IA Generativa para crear copy, imágenes y conceptos visuales en minutos, multiplicando la capacidad de producción de tu equipo creativo.
+    
+- **Segmentación y Personalización:** Aprende a analizar grandes volúmenes de datos para crear compañas hiper-personalizadas que resuenen con tu audiencia objetivo.
+    
+- **Automatización de Reportes:** Olvídate de las horas perdidas en hojas de cálculo. Implementa sistemas que analizan el rendimiento en tiempo real y sugieren optimizaciones automáticas.
+    
+- **Tendencias y Futuro del Marketing:** Mantente adelante de la curva entendiendo las próximas olas de innovación en IA aplicadas al marketing digital.
+        `
+    },
     {
         slug: 'taller-ia-profesores',
         title: 'Taller de IA para Profesores',
@@ -52,28 +98,6 @@ Exploraremos cómo las herramientas de Inteligencia Artificial pueden liberarte 
 - **Analítica de Personas (People Analytics):** Descubre cómo interpretar datos para predecir la retención, mejorar el clima laboral y tomar decisiones estratégicas fundamentadas.
     
 - **Ética en la Gestión de Talento:** Abordaremos los desafíos éticos de la IA en RRHH, asegurando prácticas justas, transparentes y libres de sesgos algorítmicos.
-        `
-    },
-    {
-        slug: 'taller-ia-marketing',
-        title: 'Taller de Inteligencia Artificial para Agencias de Marketing',
-        description: 'Transforma tu agencia con el poder de la IA. Desde la generación de contenido creativo hasta el análisis predictivo de campañas, este taller potenciará la creatividad y eficiencia de tu equipo.',
-        image: 'taller-ia-marketing.png',
-        detailBanner: 'taller-ia-marketing-banner.png',
-        imagePosition: 'right',
-        duration: '120 Min',
-        content: `
-En un mundo digital saturado, la velocidad y la personalización son clave. Este taller está diseñado para agencias de marketing que quieren liderar la vanguardia tecnológica.
-
-Descubre cómo la Inteligencia Artificial puede ser el motor creativo y analítico que tu agencia necesita para escalar resultados y sorprender a tus clientes.
-
-- **Creatividad Aumentada:** Utiliza herramientas de IA Generativa para crear copy, imágenes y conceptos visuales en minutos, multiplicando la capacidad de producción de tu equipo creativo.
-    
-- **Segmentación y Personalización:** Aprende a analizar grandes volúmenes de datos para crear compañas hiper-personalizadas que resuenen con tu audiencia objetivo.
-    
-- **Automatización de Reportes:** Olvídate de las horas perdidas en hojas de cálculo. Implementa sistemas que analizan el rendimiento en tiempo real y sugieren optimizaciones automáticas.
-    
-- **Tendencias y Futuro del Marketing:** Mantente adelante de la curva entendiendo las próximas olas de innovación en IA aplicadas al marketing digital.
         `
     }
 ];

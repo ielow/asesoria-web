@@ -103,7 +103,7 @@ export default async function CursoDetail({
 
                 {/* Contact Form */}
                 <Box margin={{ top: 'large' }}>
-                    <ContactFormCapacitacion />
+                    <ContactFormCapacitacion title={curso.formTitle} />
                 </Box>
             </Box>
         </Box >
