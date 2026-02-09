@@ -56,7 +56,7 @@ export default function CapacitacionPage() {
                 alignSelf="center"
                 pad={{ vertical: 'large', horizontal: 'medium' }}
             >
-                {cursos.map((curso) => (
+                {cursos.map((curso, index) => (
                     <Box
                         key={curso.slug}
                         direction={isMobile ? 'column' : 'row'}
@@ -67,7 +67,7 @@ export default function CapacitacionPage() {
                             // row-reverse puts the first child (image) on the right.
                             flexDirection: isMobile
                                 ? 'column'
-                                : curso.imagePosition === 'right'
+                                : index % 2 !== 0
                                     ? 'row-reverse'
                                     : 'row',
                         }}

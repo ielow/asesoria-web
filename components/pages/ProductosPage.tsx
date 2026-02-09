@@ -36,6 +36,7 @@ export default function ProductsPage() {
                         {[
                             {
                                 name: "AI Station Starter",
+                                slug: "ai-station-starter",
                                 users: "5 - 20 Usuarios",
                                 processor: "Ryzen 9 + Wormhole n150d",
                                 image: "/ai-station-starter-v3.png",
@@ -44,6 +45,7 @@ export default function ProductsPage() {
                             },
                             {
                                 name: "AI Station Pro",
+                                slug: "ai-station-pro",
                                 users: "20 - 50 Usuarios",
                                 processor: "Ryzen 9 + Wormhole n300d",
                                 image: "/ai-station-pro-v3.png",
@@ -52,6 +54,7 @@ export default function ProductsPage() {
                             },
                             {
                                 name: "AI Station Ultra",
+                                slug: "ai-station-ultra",
                                 users: "50 - 120+ Usuarios",
                                 processor: "AMD EPYC + 4x Wormhole n300",
                                 image: "/ai-station-premium-v3.png",
@@ -59,7 +62,11 @@ export default function ProductsPage() {
                                 textColor: "text-indigo-400"
                             }
                         ].map((product, idx) => (
-                            <div key={idx} className="group relative bg-[#2a2a2a]/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-5 hover:border-gray-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <Link
+                                key={idx}
+                                href={`/productos/${product.slug}`}
+                                className="group relative bg-[#2a2a2a]/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-5 hover:border-gray-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl block"
+                            >
                                 <div className={`absolute inset-0 bg-gradient-to-r ${product.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}></div>
 
                                 <div className="relative aspect-[1/1] mb-4 overflow-hidden rounded-lg bg-gray-800 border border-gray-700/50">
@@ -86,7 +93,7 @@ export default function ProductsPage() {
                                         {product.processor}
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
@@ -111,7 +118,7 @@ export default function ProductsPage() {
                 <div className="flex flex-col md:flex-row items-center gap-12 group">
                     <div className="w-full md:w-1/2 relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-[#2a2a2a] border border-gray-700 rounded-2xl p-4 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
+                        <Link href="/productos/ai-station-starter" className="block relative bg-[#2a2a2a] border border-gray-700 rounded-2xl p-4 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
                             {/* Placeholder for image until generated */}
                             <div className="aspect-[4/3] relative flex items-center justify-center bg-gray-800 rounded-xl">
                                 <Image
@@ -127,7 +134,7 @@ export default function ProductsPage() {
                                 />
                                 <span className="absolute text-gray-500 text-sm">Imagen Generada por IA</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="w-full md:w-1/2 space-y-6">
                         <h3 className="text-3xl font-bold text-white">AI Station Starter</h3>
@@ -157,7 +164,7 @@ export default function ProductsPage() {
                 <div className="flex flex-col md:flex-row-reverse items-center gap-12 group">
                     <div className="w-full md:w-1/2 relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-[#2a2a2a] border border-gray-700 rounded-2xl p-4 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
+                        <Link href="/productos/ai-station-pro" className="block relative bg-[#2a2a2a] border border-gray-700 rounded-2xl p-4 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
                             <div className="aspect-[4/3] relative flex items-center justify-center bg-gray-800 rounded-xl">
                                 <Image
                                     src="/ai-station-pro-v3.png"
@@ -171,7 +178,7 @@ export default function ProductsPage() {
                                 />
                                 <span className="absolute text-gray-500 text-sm">Imagen Generada por IA</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="w-full md:w-1/2 space-y-6">
                         <h3 className="text-3xl font-bold text-white">AI Station Pro</h3>
@@ -201,7 +208,7 @@ export default function ProductsPage() {
                 <div className="flex flex-col md:flex-row items-center gap-12 group">
                     <div className="w-full md:w-1/2 relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-[#2a2a2a] border border-gray-700 rounded-2xl p-4 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
+                        <Link href="/productos/ai-station-ultra" className="block relative bg-[#2a2a2a] border border-gray-700 rounded-2xl p-4 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
                             <div className="aspect-[4/3] relative flex items-center justify-center bg-gray-800 rounded-xl">
                                 <Image
                                     src="/ai-station-premium-v3.png"
@@ -215,7 +222,7 @@ export default function ProductsPage() {
                                 />
                                 <span className="absolute text-gray-500 text-sm">Imagen Generada por IA</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="w-full md:w-1/2 space-y-6">
                         <h3 className="text-3xl font-bold text-white">AI Station Ultra</h3>

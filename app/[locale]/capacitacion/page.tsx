@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import CapacitacionPage from '@/components/pages/CapacitacionPage';
 
 export const metadata: Metadata = {
-  title: "Capacitación en Inteligencia Artificial para Empresas",
-  description: "Formación especializada en IA para su equipo. Desde fundamentos para directivos hasta desarrollo técnico avanzado. Eleve el talento de su organización.",
+  title: "Cursos y Talleres de IA | Capacitación Empresarial",
+  description: "Formación práctica en Inteligencia Artificial. Talleres especializados para Emprendedores y Profesores. Aprenda a integrar la IA en su flujo de trabajo diario.",
 };
 
 export default function Page() {

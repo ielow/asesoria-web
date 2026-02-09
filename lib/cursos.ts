@@ -34,6 +34,7 @@ Descubre cómo la IA se convierte en tu director de marketing, tu analista de da
 - **Pitch y Ventas:** Mejora tus presentaciones y perfecciona tu discurso de ventas con retroalimentación instantánea, aumentando tus probabilidades de cerrar clientes o levantar inversión.
         `
     },
+    /*
     {
         slug: 'taller-ia-marketing',
         title: 'Taller de Inteligencia Artificial para Agencias de Marketing',
@@ -56,6 +57,7 @@ Descubre cómo la Inteligencia Artificial puede ser el motor creativo y analíti
 - **Tendencias y Futuro del Marketing:** Mantente adelante de la curva entendiendo las próximas olas de innovación en IA aplicadas al marketing digital.
         `
     },
+    */
     {
         slug: 'taller-ia-profesores',
         title: 'Taller de IA para Profesores',
@@ -78,6 +80,7 @@ Una capacitación de solo 2 horas que se traduce en un equipo de más feliz, con
 - **Estrategia de Integración Real:** Obtendrán un mapa claro. Un marco de trabajo probado para incorporar estas novedades en sus clases mañana mismo, de forma ordenada y efectiva.
         `
     },
+    /*
     {
         slug: 'taller-ia-recursos-humanos',
         title: 'Taller de Inteligencia Artificial para Recursos Humanos',
@@ -100,6 +103,7 @@ Exploraremos cómo las herramientas de Inteligencia Artificial pueden liberarte 
 - **Ética en la Gestión de Talento:** Abordaremos los desafíos éticos de la IA en RRHH, asegurando prácticas justas, transparentes y libres de sesgos algorítmicos.
         `
     }
+    */
 ];
 
 export function getAllCursos(): Curso[] {
