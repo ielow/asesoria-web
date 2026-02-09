@@ -17,11 +17,24 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://asesoriadeia.com'),
   title: {
     template: '%s | Asesoría IA',
-    default: 'Asesoría en Inteligencia Artificial',
+    default: 'Asesoría en Inteligencia Artificial | Soluciones Empresariales',
   },
-  description: "Soluciones de Inteligencia Artificial para empresas. Consultoría, capacitación, hardware y soporte especializado para su transformación digital.",
+  description: "Transforme su empresa con soluciones de Inteligencia Artificial. Consultoría estratégica, capacitación corporativa y hardware especializado para su éxito digital.",
+  openGraph: {
+    title: 'Asesoría en Inteligencia Artificial',
+    description: 'Soluciones de IA para empresas: Consultoría, Capacitación y Hardware.',
+    url: 'https://asesoriadeia.com',
+    siteName: 'Asesoría IA',
+    locale: 'es_MX',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

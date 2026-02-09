@@ -85,7 +85,11 @@ function ToastNotification({
     );
 }
 
-export default function ContactFormCapacitacion() {
+interface ContactFormCapacitacionProps {
+    title?: string;
+}
+
+export default function ContactFormCapacitacion({ title }: ContactFormCapacitacionProps) {
     const size = useContext(ResponsiveContext);
     const locale = useLocale();
     const t = useTranslations('contact');
@@ -211,7 +215,7 @@ export default function ContactFormCapacitacion() {
                         fontWeight: 'bold'
                     }}
                 >
-                    ¿Listo para transformar tu enseñanza?
+                    {title || '¿Listo para transformar tu enseñanza?'}
                 </Heading>
 
                 {/* Formulario */}

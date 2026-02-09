@@ -3,8 +3,8 @@ import BlogList from '@/components/BlogList';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Blog de IA y Tecnología | Noticias y Análisis",
-  description: "Artículos, noticias y guías sobre Inteligencia Artificial, Machine Learning y tecnología empresarial. Manténgase actualizado con nuestro blog.",
+  title: "Blog de Tecnología e Inteligencia Artificial",
+  description: "Artículos, noticias y análisis sobre el impacto de la Inteligencia Artificial en los negocios. Manténgase informado con las últimas tendencias.",
 };
 
 export default function Blog() {

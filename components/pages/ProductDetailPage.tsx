@@ -50,13 +50,12 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
                         </div>
 
                         <div className="bg-[#252525] rounded-xl p-6 border border-gray-700/50">
-                            <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2 font-semibold">Precio Estimado</h3>
+                            <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2 font-semibold">Precio inicial desde</h3>
                             <div className="flex items-baseline gap-2">
                                 <span className="text-3xl font-bold text-white">{product.approxPrice}</span>
-                                <span className="text-sm text-gray-500">*No incluye impuestos</span>
                             </div>
                             <p className="text-xs text-gray-500 mt-2">
-                                El precio puede variar según la configuración final y el envío.
+                                IVA incluido. Los precios pueden variar. Son precios base y la configuración es personalizada.
                             </p>
                         </div>
                     </div>
@@ -118,15 +117,12 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
                         </div>
 
                         <div className="pt-4">
-                            <Link href="/contacto" className={`inline-flex items-center justify-center w-full md:w-auto px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-gradient-to-r ${product.color} rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1`}>
+                            <Link href="/solicitar-cotizacion" className={`inline-flex items-center justify-center w-full md:w-auto px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-gradient-to-r ${product.color} rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1`}>
                                 Solicitar Cotización Personalizada
                                 <svg className="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </Link>
-                            <p className="mt-4 text-sm text-center md:text-left text-gray-500">
-                                ¿Necesitas una configuración a medida? <Link href="/contacto" className="text-white hover:underline">Contáctanos</Link>
-                            </p>
                         </div>
 
                     </div>
