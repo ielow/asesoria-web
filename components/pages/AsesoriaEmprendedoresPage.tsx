@@ -1,7 +1,7 @@
 'use client';
 import { useContext } from 'react';
 import { Box, Heading, Paragraph, Button, ResponsiveContext, Grid, Text } from 'grommet';
-import { Checkmark, PlayFill, BarChart, Robot, ShieldSecurity } from 'grommet-icons';
+import { Checkmark, PlayFill, BarChart, Robot, ShieldSecurity, Compass, Contact, Diamond } from 'grommet-icons';
 import { Link } from '@/i18n/routing';
 
 export default function AsesoriaEmprendedoresPage() {
@@ -9,15 +9,15 @@ export default function AsesoriaEmprendedoresPage() {
     const isMobile = size === 'small';
 
     const checkItems = [
-        { text: "No necesitas saber de código.", icon: <Text color="status-critical">❌</Text> },
-        { text: "No necesitas procesos difíciles de instalación.", icon: <Text color="status-critical">❌</Text> },
-        { text: "Solo necesitas saber qué pedirle, y nosotros te daremos las fórmulas exactas.", icon: <Checkmark color="status-ok" /> }
+        { text: "No necesitas saber de código.", icon: <Text color="status-critical">❌</Text>, isUnderline: true },
+        { text: "No necesitas procesos difíciles de configuración.", icon: <Text color="status-critical">❌</Text>, isUnderline: true },
+        { text: "Solo necesitas saber qué pedirle, y con nosotros aprendes cómo.", icon: <Checkmark color="status-ok" />, isUnderline: false }
     ];
 
     const modules = [
         {
             title: "Módulo 1: Fluidez Digital (Tus primeros pasos seguros)",
-            icon: <PlayFill size="large" color="#FF31D9" />,
+            icon: <Compass size="large" color="#FF31D9" />,
             points: [
                 "Entiende cómo 'hablarle' a la IA para obtener lo que necesitas.",
                 "Genera imágenes comerciales, audios, videos y presentaciones profesionales al instante con herramientas gratuitas y fáciles de usar."
@@ -25,7 +25,7 @@ export default function AsesoriaEmprendedoresPage() {
         },
         {
             title: "Módulo 2: Tu Agencia de Marketing Personal",
-            icon: <BarChart size="large" color="#5817EF" />,
+            icon: <Diamond size="large" color="#5817EF" />,
             points: [
                 "Aprende las fórmulas exactas (prompts) para crear campañas publicitarias, calendarios para redes sociales y analizar a tu competencia en minutos.",
                 "Diseño sin ser diseñador: Crea fotos de producto (product shots) y contenido en video solo usando texto."
@@ -118,7 +118,7 @@ export default function AsesoriaEmprendedoresPage() {
                         margin={{ bottom: 'xlarge' }}
                         style={{ maxWidth: '800px', opacity: 0.9, lineHeight: '1.5', fontWeight: '300' }}
                     >
-                        Descubre cómo automatizar tus ventas, crear contenido en minutos y optimizar tus procesos operativos de la forma más sencilla e intuitiva posible. <strong>0 código; 100% práctico.</strong>
+                        Descubre cómo automatizar tus ventas, crear contenido en minutos y optimizar tus procesos operativos de forma sencilla e intuitiva. <br /><strong>0 código; 100% práctico.</strong>
                     </Paragraph>
 
                     <Link href="/solicitar-cotizacion" style={{ textDecoration: 'none' }}>
@@ -144,13 +144,13 @@ export default function AsesoriaEmprendedoresPage() {
 
             {/* PROBLEM SECTION */}
             <Box background="#222222" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
-                <Box width="large">
+                <Box width="xlarge" align="center">
                     <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'large' }} style={{ fontWeight: '800', fontSize: isMobile ? '2rem' : '2.8rem' }}>
-                        ¿Sientes que la IA avanza muy rápido y es demasiado técnica para ti?
+                        ¿Sientes que la IA avanza muy rápido y es complicado seguirle el paso?
                     </Heading>
 
                     <Paragraph color="rgba(255,255,255,0.8)" size="large" textAlign="center" margin={{ bottom: 'large' }} style={{ lineHeight: '1.6' }}>
-                        Todos los días salen herramientas nuevas. Como emprendedor, necesitas soluciones que te ahorren tiempo, no plataformas que requieran meses de aprendizaje complejo. La buena noticia es que <strong>no necesitas ser programador</strong> para aprovechar el poder de la Inteligencia Artificial.
+                        Todos los días salen herramientas nuevas. Como emprendedor, necesitas soluciones que te ahorren tiempo, no plataformas que requieran meses de aprendizaje. La buena noticia es que <strong>no necesitas ser programador</strong> para aprovechar el poder de la Inteligencia Artificial.
                     </Paragraph>
 
                     <Box
@@ -158,12 +158,12 @@ export default function AsesoriaEmprendedoresPage() {
                         pad="large"
                         round="medium"
                         gap="medium"
-                        style={{ boxShadow: '0 10px 30px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.05)' }}
+                        style={{ boxShadow: '0 10px 30px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.05)', width: '50%' }}
                     >
                         {checkItems.map((item, index) => (
                             <Box key={index} direction="row" gap="medium" align="center">
                                 <Box flex={false}>{item.icon}</Box>
-                                <Text color="white" size="large">{item.text}</Text>
+                                {item.isUnderline ? <Text style={{ textDecoration: 'line-through' }} color="white" size="large">{item.text}</Text> : <Text color="white" size="large">{item.text}</Text>}
                             </Box>
                         ))}
                     </Box>
@@ -173,12 +173,11 @@ export default function AsesoriaEmprendedoresPage() {
             {/* SOLUTION SECTION */}
             <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="linear-gradient(180deg, #222222 0%, #1a1a1a 100%)">
                 <Box width="large" align="center">
-                    <Text color="#FF31D9" weight="bold" size="large" margin={{ bottom: 'small' }} style={{ letterSpacing: '1px' }}>LA SOLUCIÓN</Text>
-                    <Heading level={2} color="white" textAlign="center" margin={{ top: 'none', bottom: 'medium' }} style={{ fontWeight: '800', fontSize: isMobile ? '2.2rem' : '3rem' }}>
+                    <Heading level={2} color="#FF31D9" textAlign="center" margin={{ top: 'none', bottom: 'medium' }} style={{ fontWeight: '800', fontSize: isMobile ? '2.2rem' : '3rem' }}>
                         Bienvenido a la Inteligencia Artificial sin complicaciones.
                     </Heading>
                     <Paragraph color="rgba(255,255,255,0.8)" size="large" textAlign="center" style={{ lineHeight: '1.6' }}>
-                        <strong>AsesorIA para Emprendedores</strong> no es un curso teórico aburrido. Es un laboratorio de implementación donde te enseñamos exactamente qué botones presionar para que salgas con sistemas trabajando por ti desde el primer día.
+                        <strong>ASESOR(IA) para Emprendedores</strong> no es un curso teórico aburrido. Es un laboratorio de implementación donde te asesoramos como comenzar a integrar IA en tu negocio desde el primer día.
                     </Paragraph>
                 </Box>
             </Box>
@@ -187,7 +186,7 @@ export default function AsesoriaEmprendedoresPage() {
             <Box background="#1a1a1a" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
                 <Box width="xlarge">
                     <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'xlarge' }} style={{ fontWeight: '800', fontSize: isMobile ? '2.2rem' : '3rem' }}>
-                        Lo que vas a lograr paso a paso
+                        Lo que vas a lograr paso a paso <span>🤩</span>
                     </Heading>
 
                     <Grid columns={isMobile ? '100%' : '48%'} gap="large">
