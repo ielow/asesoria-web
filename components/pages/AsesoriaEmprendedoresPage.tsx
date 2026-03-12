@@ -1,8 +1,7 @@
 'use client';
 import { useContext } from 'react';
-import { Box, Heading, Paragraph, Button, ResponsiveContext, Grid, Text } from 'grommet';
-import { Checkmark, PlayFill, BarChart, Robot, ShieldSecurity, Compass, Contact, Diamond } from 'grommet-icons';
-import { Link } from '@/i18n/routing';
+import { Box, Heading, Paragraph, Button, ResponsiveContext, Grid, Text, Accordion, AccordionPanel } from 'grommet';
+import { Checkmark, Robot, ShieldSecurity, Compass, Diamond } from 'grommet-icons';
 
 export default function AsesoriaEmprendedoresPage() {
     const size = useContext(ResponsiveContext);
@@ -54,6 +53,25 @@ export default function AsesoriaEmprendedoresPage() {
         { title: "Directorio de Apps", desc: "La lista definitiva de las herramientas de IA más prácticas para negocios.", icon: "🛠️" },
         { title: "Comunidad Privada", desc: "Acceso a nuestro grupo para resolver dudas y hacer networking.", icon: "🤝" },
         { title: "Certificado Oficial", desc: "Documento que avala tu participación.", icon: "🎓" }
+    ];
+
+    const faqs = [
+        {
+            question: "¿Necesito saber de programación?",
+            answer: "No, en absoluto. Este taller está diseñado al 100% para principiantes sin conocimientos técnicos. Aprenderás a usar la IA a través de interfaces amigables e intuitivas."
+        },
+        {
+            question: "¿Tengo que pagar por herramientas extra?",
+            answer: "No es estrictamente necesario. Te enseñaremos a usar las versiones gratuitas de las mejores herramientas de Inteligencia Artificial para que puedas implementar soluciones desde el día uno."
+        },
+        {
+            question: "¿Para quién es este taller?",
+            answer: "Es ideal para dueños de negocio, emprendedores, creadores de contenido o marketers que necesitan automatizar tareas operativas, crear mejores campañas publicitarias y recuperar su tiempo."
+        },
+        {
+            question: "¿Cuándo y cómo accedo al material?",
+            answer: "Obtendrás acceso inmediato a la comunidad privada y recibirás todos los recursos descargables (como el Framework 4D y el directorio de apps) al registrarte."
+        }
     ];
 
     return (
@@ -121,7 +139,7 @@ export default function AsesoriaEmprendedoresPage() {
                         Descubre cómo automatizar tus ventas, crear contenido en minutos y optimizar tus procesos operativos de forma sencilla e intuitiva. <br /><strong>0 código; 100% práctico.</strong>
                     </Paragraph>
 
-                    <Link href="/solicitar-cotizacion" style={{ textDecoration: 'none' }}>
+                    <a href="https://book.stripe.com/test_3cI4gzcQp7dS9928dlfIs00" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                         <Button
                             primary
                             size="large"
@@ -138,7 +156,7 @@ export default function AsesoriaEmprendedoresPage() {
                             label="Quiero simplificar mi negocio con IA"
                             hoverIndicator="#f0f0f0"
                         />
-                    </Link>
+                    </a>
                 </Box>
             </Box>
 
@@ -274,60 +292,33 @@ export default function AsesoriaEmprendedoresPage() {
                 </Box>
             </Box>
 
-            {/* FILTER SECTION */}
+            {/* FAQ SECTION */}
             <Box background="#1a1a1a" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
                 <Box width="large" align="center">
                     <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'xlarge' }} style={{ fontWeight: '800' }}>
-                        ¿Este taller es para ti?
+                        Preguntas Frecuentes
                     </Heading>
 
-                    <Grid columns={isMobile ? '100%' : '50%'} gap="large" width="100%">
-                        <Box
-                            background="#222222"
-                            pad="large"
-                            round="medium"
-                            style={{
-                                borderTop: '6px solid #4CAF50',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}
-                        >
-                            <Box style={{ position: 'absolute', top: '-10%', right: '-10%', width: '150px', height: '150px', background: 'rgba(76, 175, 80, 0.15)', borderRadius: '50%', filter: 'blur(30px)' }} />
-                            <Box direction="row" gap="medium" align="center" margin={{ bottom: 'large' }}>
-                                <Box background="rgba(76, 175, 80, 0.2)" pad="small" round="full">
-                                    <Checkmark color="#4CAF50" size="large" />
-                                </Box>
-                                <Heading level={3} color="white" margin="none" style={{ fontWeight: '800' }}>SÍ es para ti si:</Heading>
-                            </Box>
-                            <Paragraph color="rgba(255,255,255,0.85)" margin="none" style={{ lineHeight: '1.7', fontSize: '1.2rem' }}>
-                                Eres dueño de negocio, emprendedor, marketer o consultor que busca recuperar su tiempo y delegar tareas operativas en la IA de forma inmediata.
-                            </Paragraph>
-                        </Box>
-
-                        <Box
-                            background="#222222"
-                            pad="large"
-                            round="medium"
-                            style={{
-                                borderTop: '6px solid #F44336',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}
-                        >
-                            <Box style={{ position: 'absolute', top: '-10%', right: '-10%', width: '150px', height: '150px', background: 'rgba(244, 67, 54, 0.15)', borderRadius: '50%', filter: 'blur(30px)' }} />
-                            <Box direction="row" gap="medium" align="center" margin={{ bottom: 'large' }}>
-                                <Box background="rgba(244, 67, 54, 0.2)" pad="small" round="full" align="center" justify="center" width="48px" height="48px">
-                                    <Text color="#F44336" size="xlarge" weight="bold" style={{ lineHeight: '1' }}>✕</Text>
-                                </Box>
-                                <Heading level={3} color="white" margin="none" style={{ fontWeight: '800' }}>NO es para ti si:</Heading>
-                            </Box>
-                            <Paragraph color="rgba(255,255,255,0.85)" margin="none" style={{ lineHeight: '1.7', fontSize: '1.2rem' }}>
-                                Buscas un curso avanzado de código, desarrollo de software o creación de modelos técnicos complejos.
-                            </Paragraph>
-                        </Box>
-                    </Grid>
+                    <Box width="100%" background="#222222" round="medium" pad="medium" style={{ border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
+                        <Accordion animate={true} multiple={false}>
+                            {faqs.map((faq, index) => (
+                                <AccordionPanel
+                                    key={index}
+                                    label={
+                                        <Box pad="medium">
+                                            <Text color="white" weight="bold" size="large">{faq.question}</Text>
+                                        </Box>
+                                    }
+                                >
+                                    <Box pad="medium" background="rgba(255,255,255,0.02)">
+                                        <Paragraph color="rgba(255,255,255,0.8)" margin="none" style={{ lineHeight: '1.6' }}>
+                                            {faq.answer}
+                                        </Paragraph>
+                                    </Box>
+                                </AccordionPanel>
+                            ))}
+                        </Accordion>
+                    </Box>
                 </Box>
             </Box>
 
@@ -342,12 +333,12 @@ export default function AsesoriaEmprendedoresPage() {
             >
                 <Box width="large" align="center" pad="large" background="linear-gradient(135deg, rgba(255,49,217,0.1) 0%, rgba(88,23,239,0.1) 100%)" round="large" style={{ border: '1px solid rgba(255,255,255,0.2)' }}>
                     <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'medium', top: 'none' }} style={{ fontWeight: '900', fontSize: isMobile ? '2.5rem' : '3.5rem' }}>
-                        Es hora de que la tecnología trabaje para ti.
+                        Es hora de que la IA trabaje para ti.
                     </Heading>
                     <Paragraph color="rgba(255,255,255,0.9)" size="xlarge" textAlign="center" margin={{ bottom: 'large' }} style={{ maxWidth: '600px' }}>
-                        Da el paso hacia una gestión más inteligente y libera tu agenda de tareas repetitivas hoy mismo.
+                        Domina la Inteligencia Artificial y libera tu agenda de tareas repetitivas.
                     </Paragraph>
-                    <Link href="/solicitar-cotizacion" style={{ textDecoration: 'none' }}>
+                    <a href="https://book.stripe.com/test_3cI4gzcQp7dS9928dlfIs00" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                         <Button
                             primary
                             size="large"
@@ -360,11 +351,12 @@ export default function AsesoriaEmprendedoresPage() {
                                 fontWeight: 'bold',
                                 boxShadow: '0px 10px 20px rgba(0,0,0,0.3)',
                                 border: 'none'
+
                             }}
-                            label="Quiero simplificar mi negocio con IA"
+                            label="¡Inscríbete!"
                             hoverIndicator="#4611cc"
                         />
-                    </Link>
+                    </a>
                 </Box>
             </Box>
         </Box>
