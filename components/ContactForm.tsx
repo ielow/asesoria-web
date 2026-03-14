@@ -373,6 +373,33 @@ export default function ContactForm() {
                       borderColor: getBorderColor('tipoConsulta'),
                       borderWidth: '2px'
                     }}
+                    dropProps={{
+                      elevation: 'large',
+                      round: '16px',
+                      style: {
+                        backdropFilter: 'blur(30px)',
+                        WebkitBackdropFilter: 'blur(30px)',
+                        background: 'rgba(255, 255, 255, 0.4)',
+                        border: '1px solid rgba(255, 255, 255, 0.5)',
+                        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.15)',
+                        padding: '8px',
+                      }
+                    }}
+                    children={(option, index, options, { active, selected }) => (
+                      <Box
+                        pad={{ horizontal: 'small', vertical: 'small' }}
+                        style={{
+                          background: active ? 'rgba(255, 255, 255, 0.6)' : 'transparent',
+                          transition: 'all 0.2s ease',
+                          borderRadius: '8px',
+                          color: selected ? '#7C3AED' : '#1a1a1a',
+                          fontWeight: selected ? 'bold' : (active ? '500' : 'normal'),
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {option}
+                      </Box>
+                    )}
                   />
                   {fieldErrors.tipoConsulta && (
                     <p className="text-[10.24px] text-red-500 mt-1 mb-0">
