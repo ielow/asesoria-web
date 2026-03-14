@@ -52,7 +52,7 @@ export default function QuotePage() {
                     </p>
                     <button
                         onClick={() => router.push('/productos')}
-                        className="w-full py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors"
+                        className="form-button w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold py-4 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2 text-lg"
                     >
                         Volver a Productos
                     </button>
@@ -64,7 +64,7 @@ export default function QuotePage() {
     return (
         <main className="min-h-screen bg-[#1a1a1a] text-white relative overflow-hidden">
             {/* Background Effects */}
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#7C3AED]/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
 
             <div className="relative z-10 w-full px-6 py-20">

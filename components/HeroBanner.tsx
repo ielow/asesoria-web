@@ -96,7 +96,7 @@ export default function HeroBanner() {
           }}
         >
           {t('titlePart1')}{' '}
-          <span style={{ color: '#c4b5fd' }}>{t('titleHighlight')}</span>{' '}
+          <span style={{ color: 'var(--brand-secondary)' }}>{t('titleHighlight')}</span>{' '}
           {t('titlePart2')}
         </Heading>
         <Paragraph

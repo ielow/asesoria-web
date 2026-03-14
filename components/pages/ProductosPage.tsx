@@ -28,7 +28,7 @@ export default function ProductsPage() {
                     </Heading>
 
                     <Heading level={3} size="small" className="mx-auto font-light text-gray-300 leading-relaxed">
-                        Infraestructura escalable <span className="italic text-purple-400">On-Premise</span> de alto rendimiento diseñado para mantener sus datos privados y sus costos fijos.
+                        Infraestructura escalable <span className="italic" style={{ color: 'var(--brand-secondary)' }}>On-Premise</span> de alto rendimiento diseñado para mantener sus datos privados y sus costos fijos.
                     </Heading>
 
                     {/* Quick View Cards */}
@@ -41,7 +41,7 @@ export default function ProductsPage() {
                                 processor: "Ryzen 9 + Wormhole n150d",
                                 image: "/ai-station-starter-v3.png",
                                 color: "from-purple-500 to-blue-500",
-                                textColor: "text-purple-400"
+                                textColor: "text-[#c4b5fd]"
                             },
                             {
                                 name: "AI Station Pro",
@@ -102,7 +102,7 @@ export default function ProductsPage() {
                             Hemos simplificado la adopción de Inteligencia Artificial para las PyMEs. Olvide las configuraciones complejas y los costos volátiles; nuestra gama de estaciones de trabajo está optimizada para entregar rendimiento inmediato.
                         </Paragraph>
                         <Paragraph fill className="text-lg">
-                            La verdadera inteligencia artificial no vive en una nube compartida; vive donde usted tiene el mando. La gama <strong className="text-white">AI Station</strong> transforma su oficina en un centro de datos seguro, estaciones que integran procesadores con tecnología especializada en Inteligencia Artificial para ofrecer una experiencia fluida, <span className="italic text-purple-400">infranqueable</span> y sin facturas sorpresa.
+                            La verdadera inteligencia artificial no vive en una nube compartida; vive donde usted tiene el mando. La gama <strong className="text-white">AI Station</strong> transforma su oficina en un centro de datos seguro, estaciones que integran procesadores con tecnología especializada en Inteligencia Artificial para ofrecer una experiencia fluida, <span className="italic text-[#c4b5fd]">infranqueable</span> y sin facturas sorpresa.
                         </Paragraph>
                         <Paragraph fill className="text-lg">
                             Elija la potencia que su empresa necesita para dejar de alquilar capacidad y comenzar a construir su propio activo tecnológico.
@@ -139,7 +139,7 @@ export default function ProductsPage() {
                     <div className="w-full md:w-1/2 space-y-6">
                         <h3 className="text-3xl font-bold text-white">AI Station Starter</h3>
                         <div className="space-y-2">
-                            <h4 className="text-xl text-purple-400 font-semibold">La Fortaleza Ágil</h4>
+                            <h4 className="text-xl text-[#c4b5fd] font-semibold">La Fortaleza Ágil</h4>
                             <div className="flex flex-wrap gap-4 text-sm text-gray-300">
                                 <span className="bg-gray-800 px-3 py-1 rounded-full border border-gray-700">Capacidad: Ideal para 5 - 20 Usuarios</span>
                                 <span className="bg-gray-800 px-3 py-1 rounded-full border border-gray-700">Motor: Ryzen 9 + Wormhole n150d</span>
@@ -153,7 +153,7 @@ export default function ProductsPage() {
                                 label="Ver Especificaciones Starter"
                                 icon={<FormNextLink />}
                                 reverse
-                                className="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                                className="text-[#c4b5fd] hover:text-[#7C3AED] font-semibold transition-colors"
                                 plain
                             />
                         </Link>
@@ -252,7 +252,7 @@ export default function ProductsPage() {
 
             {/* Details and CTA */}
             <section className="py-20 px-6 md:px-12 lg:px-24 bg-[#2a2a2a] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[80px]"></div>
+                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#7C3AED]/10 rounded-full blur-[80px]"></div>
 
                 <div className="max-w-5xl mx-auto relative z-10">
                     <div className="text-center mb-12">

@@ -237,7 +237,7 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                     >
                         <Box gap="small" style={{ fontSize: '12.8px' }}>
                             <Box>
-                                <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                                <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                                     {t('form.nameLabel')}
                                 </label>
                                 <TextInput
@@ -250,14 +250,14 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                                     }}
                                 />
                                 {fieldErrors.nombre && (
-                                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                                         {fieldErrors.nombre}
                                     </p>
                                 )}
                             </Box>
 
                             <Box>
-                                <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                                <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                                     {t('form.emailLabel')}
                                 </label>
                                 <TextInput
@@ -271,14 +271,14 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                                     }}
                                 />
                                 {fieldErrors.email && (
-                                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                                         {fieldErrors.email}
                                     </p>
                                 )}
                             </Box>
 
                             <Box>
-                                <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                                <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                                     {t('form.phoneLabel')}
                                 </label>
                                 <TextInput
@@ -292,14 +292,14 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                                     }}
                                 />
                                 {fieldErrors.telefono && (
-                                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                                         {fieldErrors.telefono}
                                     </p>
                                 )}
                             </Box>
 
                             <Box>
-                                <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                                <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                                     {t('form.companyLabel')}
                                 </label>
                                 <TextInput
@@ -312,7 +312,7 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                                     }}
                                 />
                                 {fieldErrors.empresa && (
-                                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                                         {fieldErrors.empresa}
                                     </p>
                                 )}
@@ -349,7 +349,7 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                                 </span>
                             </Box>
                             {fieldErrors.privacyAccepted && (
-                                <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                                <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                                     {fieldErrors.privacyAccepted}
                                 </p>
                             )}
@@ -359,19 +359,11 @@ export default function ContactFormCapacitacion({ title }: ContactFormCapacitaci
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
+                                className="form-button w-[200px] h-[50px] bg-[#7C3AED] text-white font-bold rounded-xl transition-colors mx-auto block"
                                 style={{
-                                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                    border: 'none',
-                                    borderRadius: '12px',
-                                    padding: '12.8px 25.6px',
-                                    fontWeight: 'bold',
-                                    fontSize: '12.8px',
-                                    width: '100%',
                                     cursor: isSubmitting ? 'not-allowed' : 'pointer',
                                     opacity: isSubmitting ? 0.7 : 1,
-                                    transition: 'all 0.3s ease',
-                                    boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
-                                    color: 'white'
+                                    fontSize: '14.4px'
                                 }}
                             >
                                 {isSubmitting ? 'ENVIANDO...' : 'ENVIAR'}

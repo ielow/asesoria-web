@@ -35,7 +35,7 @@ export const products: Product[] = [
         ],
         image: "/ai-station-starter-v3.png",
         color: "from-purple-500 to-blue-500",
-        textColor: "text-purple-400",
+        textColor: "text-[#c4b5fd]",
         gradient: "from-purple-500/20 to-blue-500/20",
         approxPrice: "$60,000 MXN"
     },

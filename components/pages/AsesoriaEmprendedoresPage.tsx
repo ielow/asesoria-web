@@ -1,6 +1,6 @@
 'use client';
 import { useContext } from 'react';
-import { Box, Heading, Paragraph, Button, ResponsiveContext, Grid, Text, Accordion, AccordionPanel } from 'grommet';
+import { Box, Heading, Paragraph, ResponsiveContext, Grid, Text, Accordion, AccordionPanel } from 'grommet';
 import { Checkmark, Robot, ShieldSecurity, Compass, Diamond } from 'grommet-icons';
 
 export default function AsesoriaEmprendedoresPage() {
@@ -16,7 +16,7 @@ export default function AsesoriaEmprendedoresPage() {
     const modules = [
         {
             title: "Módulo 1: Fluidez Digital (Tus primeros pasos seguros)",
-            icon: <Compass size="large" color="#FF31D9" />,
+            icon: <Compass size="large" color="var(--brand-secondary)" />,
             points: [
                 "Entiende cómo 'hablarle' a la IA para obtener lo que necesitas.",
                 "Genera imágenes comerciales, audios, videos y presentaciones profesionales al instante con herramientas gratuitas y fáciles de usar."
@@ -24,7 +24,7 @@ export default function AsesoriaEmprendedoresPage() {
         },
         {
             title: "Módulo 2: Tu Agencia de Marketing Personal",
-            icon: <Diamond size="large" color="#5817EF" />,
+            icon: <Diamond size="large" color="var(--brand-primary)" />,
             points: [
                 "Aprende las fórmulas exactas (prompts) para crear campañas publicitarias, calendarios para redes sociales y analizar a tu competencia en minutos.",
                 "Diseño sin ser diseñador: Crea fotos de producto (product shots) y contenido en video solo usando texto."
@@ -32,7 +32,7 @@ export default function AsesoriaEmprendedoresPage() {
         },
         {
             title: "Módulo 3: Tu Negocio en Piloto Automático",
-            icon: <Robot size="large" color="#FF31D9" />,
+            icon: <Robot size="large" color="var(--brand-secondary)" />,
             points: [
                 "Deja que la IA trabaje mientras duermes. Aprende a conectar aplicaciones de forma visual (como armar un rompecabezas) usando herramientas como Zapier o Make.",
                 "Construye tu propio asistente virtual para automatizar seguimientos de clientes y respuestas de WhatsApp o Instagram."
@@ -40,7 +40,7 @@ export default function AsesoriaEmprendedoresPage() {
         },
         {
             title: "Módulo 4: Privacidad Total (Tu Cerebro Corporativo)",
-            icon: <ShieldSecurity size="large" color="#5817EF" />,
+            icon: <ShieldSecurity size="large" color="var(--brand-primary)" />,
             points: [
                 "Tu información es confidencial. Descubre cómo instalar IA directamente en tu computadora para garantizar 100% de privacidad (IA On Premise).",
                 "Haz que la IA analice tus propios PDFs, contratos y manuales de forma local sin subirlos a internet."
@@ -75,14 +75,14 @@ export default function AsesoriaEmprendedoresPage() {
     ];
 
     return (
-        <Box background="#1a1a1a" style={{ minHeight: '100vh', fontFamily: 'var(--font-league-spartan), sans-serif' }}>
+        <Box style={{ minHeight: '100vh', background: 'transparent' }}>
             {/* HERO SECTION */}
             <Box
                 width="100%"
                 align="center"
                 pad={{ top: 'xlarge', bottom: 'xlarge', horizontal: 'medium' }}
                 style={{
-                    background: 'linear-gradient(135deg, rgba(88, 23, 239, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url(/taller-ia-emprendedores-banner.png)',
+                    background: 'linear-gradient(135deg, rgba(124, 58, 237, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url(/taller-ia-emprendedores-banner.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundAttachment: 'fixed',
@@ -116,10 +116,10 @@ export default function AsesoriaEmprendedoresPage() {
                         color="white"
                         textAlign="center"
                         margin={{ bottom: 'medium', top: 'none' }}
+                        className="hero-title"
                         style={{
-                            fontSize: isMobile ? '2.8rem' : '4.5rem',
                             lineHeight: '1.1',
-                            fontWeight: '900',
+                            fontWeight: '500',
                             maxWidth: '900px',
                             textShadow: '0px 10px 30px rgba(0,0,0,0.3)'
                         }}
@@ -134,36 +134,24 @@ export default function AsesoriaEmprendedoresPage() {
                         color="white"
                         size={isMobile ? 'large' : 'xlarge'}
                         margin={{ bottom: 'xlarge' }}
-                        style={{ maxWidth: '800px', opacity: 0.9, lineHeight: '1.5', fontWeight: '300' }}
+                        className="hero-subtitle"
+                        style={{ maxWidth: '800px', opacity: 0.9, lineHeight: '1.5', fontWeight: '500' }}
                     >
                         Descubre cómo automatizar tus ventas, crear contenido en minutos y optimizar tus procesos operativos de forma sencilla e intuitiva. <br /><strong>0 código; 100% práctico.</strong>
                     </Paragraph>
 
                     <a href="https://book.stripe.com/test_3cI4gzcQp7dS9928dlfIs00" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                        <Button
-                            primary
-                            size="large"
-                            style={{
-                                background: '#ffffff',
-                                color: '#5817EF',
-                                borderRadius: '30px',
-                                padding: '15px 40px',
-                                fontSize: '1.2rem',
-                                fontWeight: 'bold',
-                                boxShadow: '0px 15px 30px rgba(0,0,0,0.2)',
-                                transition: 'all 0.3s ease'
-                            }}
-                            label="Quiero simplificar mi negocio con IA"
-                            hoverIndicator="#f0f0f0"
-                        />
+                        <button className="hero-button bg-white text-[#5817EF] px-10 py-4 rounded-full font-bold text-xl flex items-center justify-center transition-all shadow-lg">
+                            Quiero simplificar mi negocio con IA
+                        </button>
                     </a>
                 </Box>
             </Box>
 
             {/* PROBLEM SECTION */}
-            <Box background="#222222" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
+            <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="rgba(0,0,0,0.2)">
                 <Box width="xlarge" align="center">
-                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'large' }} style={{ fontWeight: '800', fontSize: isMobile ? '2rem' : '2.8rem' }}>
+                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'large' }} style={{ fontWeight: '600', fontSize: isMobile ? '2rem' : '2.8rem' }}>
                         ¿Sientes que la IA avanza muy rápido y es complicado seguirle el paso?
                     </Heading>
 
@@ -189,9 +177,9 @@ export default function AsesoriaEmprendedoresPage() {
             </Box>
 
             {/* SOLUTION SECTION */}
-            <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="linear-gradient(180deg, #222222 0%, #1a1a1a 100%)">
+            <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="transparent">
                 <Box width="large" align="center">
-                    <Heading level={2} color="#FF31D9" textAlign="center" margin={{ top: 'none', bottom: 'medium' }} style={{ fontWeight: '800', fontSize: isMobile ? '2.2rem' : '3rem' }}>
+                    <Heading level={2} color="var(--brand-secondary)" textAlign="center" margin={{ top: 'none', bottom: 'medium' }} style={{ fontWeight: '600', fontSize: isMobile ? '2.2rem' : '3rem' }}>
                         Bienvenido a la Inteligencia Artificial sin complicaciones.
                     </Heading>
                     <Paragraph color="rgba(255,255,255,0.8)" size="large" textAlign="center" style={{ lineHeight: '1.6' }}>
@@ -201,9 +189,9 @@ export default function AsesoriaEmprendedoresPage() {
             </Box>
 
             {/* ROADMAP / SYLLABUS SECTION */}
-            <Box background="#1a1a1a" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
+            <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="transparent">
                 <Box width="xlarge">
-                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'xlarge' }} style={{ fontWeight: '800', fontSize: isMobile ? '2.2rem' : '3rem' }}>
+                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'xlarge' }} style={{ fontWeight: '600', fontSize: isMobile ? '2.2rem' : '3rem' }}>
                         Lo que vas a lograr paso a paso <span>🤩</span>
                     </Heading>
 
@@ -211,11 +199,11 @@ export default function AsesoriaEmprendedoresPage() {
                         {modules.map((mod, index) => (
                             <Box
                                 key={index}
-                                background="#222222"
                                 pad="large"
                                 round="medium"
+                                background="rgba(0,0,0,0.2)"
                                 style={{
-                                    borderTop: `4px solid ${index % 2 === 0 ? '#FF31D9' : '#5817EF'}`,
+                                    borderTop: `4px solid ${index % 2 === 0 ? 'var(--brand-secondary)' : 'var(--brand-primary)'}`,
                                     boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
                                     transition: 'transform 0.3s ease'
                                 }}
@@ -225,14 +213,14 @@ export default function AsesoriaEmprendedoresPage() {
                                     <Box pad="small" background="rgba(255,255,255,0.05)" round="full">
                                         {mod.icon}
                                     </Box>
-                                    <Heading level={3} color="white" margin="none" style={{ fontWeight: '700' }}>
+                                    <Heading level={3} color="white" margin="none" style={{ fontWeight: '600' }}>
                                         {mod.title}
                                     </Heading>
                                 </Box>
                                 <Box gap="small">
                                     {mod.points.map((pt, i) => (
                                         <Box key={i} direction="row" gap="small" align="start">
-                                            <Box pad={{ top: 'small' }}><Box width="8px" height="8px" background="#FF31D9" round="full" /></Box>
+                                            <Box pad={{ top: 'small' }}><Box width="8px" height="8px" background="var(--brand-secondary)" round="full" /></Box>
                                             <Paragraph color="rgba(255,255,255,0.7)" margin="none" fill style={{ lineHeight: '1.5' }}>
                                                 {pt}
                                             </Paragraph>
@@ -246,10 +234,10 @@ export default function AsesoriaEmprendedoresPage() {
             </Box>
 
             {/* DELIVERABLES SECTION */}
-            <Box background="#222222" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
+            <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="rgba(0,0,0,0.2)">
                 <Box width="xlarge" direction={isMobile ? 'column' : 'row'} gap="xlarge" align="center">
                     <Box width={isMobile ? '100%' : '40%'}>
-                        <Heading level={2} color="white" margin={{ bottom: 'medium' }} style={{ fontWeight: '800', fontSize: isMobile ? '2.2rem' : '3rem' }}>
+                        <Heading level={2} color="white" margin={{ bottom: 'medium' }} style={{ fontWeight: '600', fontSize: isMobile ? '2.2rem' : '3rem' }}>
                             Tu Kit de Implementación
                         </Heading>
                         <Paragraph color="rgba(255,255,255,0.8)" size="large" margin={{ bottom: 'large' }}>
@@ -260,7 +248,7 @@ export default function AsesoriaEmprendedoresPage() {
                                 width="100%"
                                 height="250px"
                                 round="medium"
-                                background="linear-gradient(135deg, rgba(255,49,217,0.2) 0%, rgba(88,23,239,0.2) 100%)"
+                                background="linear-gradient(135deg, rgba(196,181,253,0.2) 0%, rgba(124,58,237,0.2) 100%)"
                                 align="center"
                                 justify="center"
                                 style={{ border: '1px solid rgba(255,255,255,0.1)' }}
@@ -276,10 +264,10 @@ export default function AsesoriaEmprendedoresPage() {
                                 key={index}
                                 direction="row"
                                 gap="medium"
-                                background="#1a1a1a"
                                 pad="medium"
                                 round="small"
-                                style={{ borderLeft: '4px solid #5817EF' }}
+                                background="transparent"
+                                style={{ borderLeft: '4px solid var(--brand-primary)' }}
                             >
                                 <Text size="xxlarge">{item.icon}</Text>
                                 <Box>
@@ -293,13 +281,13 @@ export default function AsesoriaEmprendedoresPage() {
             </Box>
 
             {/* FAQ SECTION */}
-            <Box background="#1a1a1a" pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center">
+            <Box pad={{ vertical: 'xlarge', horizontal: 'medium' }} align="center" background="transparent">
                 <Box width="large" align="center">
-                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'xlarge' }} style={{ fontWeight: '800' }}>
+                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'xlarge' }} style={{ fontWeight: '600' }}>
                         Preguntas Frecuentes
                     </Heading>
 
-                    <Box width="100%" background="#222222" round="medium" pad="medium" style={{ border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
+                    <Box width="100%" background="rgba(0,0,0,0.2)" round="medium" pad="medium" style={{ border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
                         <Accordion animate={true} multiple={false}>
                             {faqs.map((faq, index) => (
                                 <AccordionPanel
@@ -327,35 +315,21 @@ export default function AsesoriaEmprendedoresPage() {
                 align="center"
                 pad={{ vertical: 'xlarge', horizontal: 'medium' }}
                 style={{
-                    background: 'linear-gradient(135deg, #1a1a1a 0%, #2a104f 100%)',
+                    background: 'transparent',
                     borderTop: '1px solid rgba(255,255,255,0.1)'
                 }}
             >
-                <Box width="large" align="center" pad="large" background="linear-gradient(135deg, rgba(255,49,217,0.1) 0%, rgba(88,23,239,0.1) 100%)" round="large" style={{ border: '1px solid rgba(255,255,255,0.2)' }}>
-                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'medium', top: 'none' }} style={{ fontWeight: '900', fontSize: isMobile ? '2.5rem' : '3.5rem' }}>
+                <Box width="large" align="center" pad="large" background="linear-gradient(135deg, rgba(196,181,253,0.1) 0%, rgba(124,58,237,0.1) 100%)" round="large" style={{ border: '1px solid rgba(255,255,255,0.2)' }}>
+                    <Heading level={2} color="white" textAlign="center" margin={{ bottom: 'medium', top: 'none' }} style={{ fontWeight: '600', fontSize: isMobile ? '2.5rem' : '3.5rem' }}>
                         Es hora de que la IA trabaje para ti.
                     </Heading>
                     <Paragraph color="rgba(255,255,255,0.9)" size="xlarge" textAlign="center" margin={{ bottom: 'large' }} style={{ maxWidth: '600px' }}>
                         Domina la Inteligencia Artificial y libera tu agenda de tareas repetitivas.
                     </Paragraph>
                     <a href="https://book.stripe.com/test_3cI4gzcQp7dS9928dlfIs00" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                        <Button
-                            primary
-                            size="large"
-                            style={{
-                                background: 'linear-gradient(90deg, #FF31D9 0%, #5817EF 100%)',
-                                color: 'white',
-                                borderRadius: '30px',
-                                padding: '15px 50px',
-                                fontSize: '1.3rem',
-                                fontWeight: 'bold',
-                                boxShadow: '0px 10px 20px rgba(0,0,0,0.3)',
-                                border: 'none'
-
-                            }}
-                            label="¡Inscríbete!"
-                            hoverIndicator="#4611cc"
-                        />
+                        <button className="hero-button bg-[#7C3AED] text-white px-10 py-4 rounded-full font-bold text-xl flex items-center justify-center transition-all shadow-lg">
+                            ¡Inscríbete!
+                        </button>
                     </a>
                 </Box>
             </Box>

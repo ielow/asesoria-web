@@ -34,7 +34,7 @@ export default function PrivacidadPage() {
                     Solicitud de Baja de Datos
                 </Heading>
                 <Paragraph color="rgba(255, 255, 255, 0.8)" textAlign="center">
-                    Si deseas acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales (Derechos ARCO), o revocar tu consentimiento, puedes enviar una solicitud a nuestro correo electrónico: <strong style={{ color: '#7C3AED' }}>contacto@asesoria.com</strong>.
+                    Si deseas acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales (Derechos ARCO), o revocar tu consentimiento, puedes enviar una solicitud a nuestro correo electrónico: <strong style={{ color: 'var(--brand-primary)' }}>contacto@asesoria.com</strong>.
                 </Paragraph>
             </Box>
         </Box>
