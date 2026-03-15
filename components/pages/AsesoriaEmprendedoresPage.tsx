@@ -80,32 +80,47 @@ export default function AsesoriaEmprendedoresPage() {
             <Box
                 width="100%"
                 align="center"
-                pad={{ top: 'xlarge', bottom: 'xlarge', horizontal: 'medium' }}
+                pad={{ top: 'large', bottom: 'large', horizontal: 'medium' }}
                 style={{
-                    background: 'linear-gradient(135deg, rgba(124, 58, 237, 0.8) 0%, rgba(0, 0, 0, 0.7) 100%), url(/taller-ia-emprendedores-banner.png)',
+                    background: 'url(/taller-ia-emprendedores-banner.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundAttachment: 'fixed',
                     position: 'relative',
                     overflow: 'hidden',
-                    paddingTop: '180px'
+                    paddingTop: '120px'
                 }}
             >
-                {/* Background decorative elements */}
-                <Box style={{ position: 'absolute', top: '-10%', left: '-10%', width: '40%', height: '40%', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', filter: 'blur(100px)' }} />
-                <Box style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '50%', height: '50%', background: 'rgba(0,0,0,0.2)', borderRadius: '50%', filter: 'blur(100px)' }} />
+                {/* Full-width Glass Overlay */}
+                <Box
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'rgba(255, 255, 255, 0.75)',
+                        backdropFilter: 'blur(10px)',
+                        WebkitBackdropFilter: 'blur(10px)',
+                        zIndex: 0
+                    }}
+                />
 
-                <Box width="xlarge" align="center" style={{ zIndex: 1 }}>
+                <Box
+                    width="xlarge"
+                    align="center"
+                    style={{ zIndex: 1 }}
+                >
                     <Text
-                        color="white"
+                        color="var(--brand-primary)"
                         weight="bold"
                         size="small"
                         style={{
                             letterSpacing: '2px',
-                            background: 'rgba(255,255,255,0.2)',
+                            background: 'rgba(124, 58, 237, 0.1)',
                             padding: '8px 16px',
                             borderRadius: '20px',
-                            marginBottom: '20px'
+                            marginBottom: '4px'
                         }}
                     >
                         ASESOR(IA) PARA EMPRENDEDORES
@@ -113,35 +128,34 @@ export default function AsesoriaEmprendedoresPage() {
 
                     <Heading
                         level={1}
-                        color="white"
+                        color="var(--brand-primary)"
                         textAlign="center"
-                        margin={{ bottom: 'medium', top: 'none' }}
+                        margin={{ bottom: 'small', top: 'none' }}
                         className="hero-title"
                         style={{
-                            lineHeight: '1.1',
-                            fontWeight: '500',
-                            maxWidth: '900px',
-                            textShadow: '0px 10px 30px rgba(0,0,0,0.3)'
+                            lineHeight: '0.9',
+                            fontWeight: '700',
+                            maxWidth: '900px'
                         }}
                     >
-                        Multiplica los resultados de tu negocio con IA
+                        <span style={{ color: 'var(--brand-secondary)' }}>Multiplica</span> los resultados de tu negocio <span style={{ color: 'var(--brand-secondary)' }}>con IA</span>
                         <span style={{ display: 'block', fontSize: isMobile ? '1.5rem' : '2.5rem', fontWeight: '500', opacity: 0.9, marginTop: '10px' }}>
                         </span>
                     </Heading>
 
                     <Paragraph
                         textAlign="center"
-                        color="white"
+                        color="#333333"
                         size={isMobile ? 'large' : 'xlarge'}
-                        margin={{ bottom: 'xlarge' }}
+                        margin={{ bottom: 'large' }}
                         className="hero-subtitle"
-                        style={{ maxWidth: '800px', opacity: 0.9, lineHeight: '1.5', fontWeight: '500' }}
+                        style={{ maxWidth: '800px', lineHeight: '1.5', fontWeight: '500' }}
                     >
                         Descubre cómo automatizar tus ventas, crear contenido en minutos y optimizar tus procesos operativos de forma sencilla e intuitiva. <br /><strong>0 código; 100% práctico.</strong>
                     </Paragraph>
 
                     <a href="https://book.stripe.com/test_3cI4gzcQp7dS9928dlfIs00" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                        <button className="hero-button bg-white text-[#5817EF] px-10 py-4 rounded-full font-bold text-xl flex items-center justify-center transition-all shadow-lg">
+                        <button className="hero-button bg-[#7C3AED] text-white px-10 py-4 rounded-full font-bold text-xl flex items-center justify-center transition-all shadow-lg">
                             Quiero simplificar mi negocio con IA
                         </button>
                     </a>

@@ -4,7 +4,7 @@
   --bg-dark: #3a3a3a;
   --bg-light: #f5f5f5;
   --brand-primary: #7C3AED;
-  --brand-secondary: #c4b5fd;
+  --brand-secondary: #FF31D9;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.8);
   --text-dark: #1a1a1a;
@@ -20,14 +20,22 @@ body {
   font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6, p, span{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   font-family: var(--font-league-spartan);
 }
 
 a {
   font-family: var(--font-instrument-sans);
-  font-weight: 500;  
+  font-weight: 500;
 }
+
 a:focus {
   outline: none;
   box-shadow: none;
@@ -107,39 +115,52 @@ a:focus {
 
 /* Animaciones para el Hero Banner */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
+
   25% {
     transform: translate(50px, -50px) scale(1.1);
   }
+
   50% {
     transform: translate(-30px, 30px) scale(0.9);
   }
+
   75% {
     transform: translate(40px, 50px) scale(1.05);
   }
 }
 
 @keyframes floatReverse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
+
   25% {
     transform: translate(-60px, 40px) scale(1.08) rotate(90deg);
   }
+
   50% {
     transform: translate(40px, -40px) scale(0.95) rotate(180deg);
   }
+
   75% {
     transform: translate(-50px, -30px) scale(1.03) rotate(270deg);
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.25;
   }
+
   50% {
     opacity: 0.35;
   }
@@ -204,9 +225,11 @@ button[class*="StyledButton"]:hover {
     font-size: 2.5rem !important;
     margin-top: 8rem !important;
   }
+
   .hero-subtitle {
     font-size: 1rem !important;
   }
+
   .hero-button {
     font-size: 0.9rem !important;
     padding: 10px 24px !important;
@@ -218,9 +241,11 @@ button[class*="StyledButton"]:hover {
     font-size: 5.5rem !important;
     margin-top: 6rem !important;
   }
+
   .hero-subtitle {
     font-size: 1.5rem !important;
   }
+
   .hero-button {
     font-size: 1rem !important;
     padding: 12px 32px !important;
@@ -230,5 +255,5 @@ button[class*="StyledButton"]:hover {
 /* WhatsApp Float Button */
 .whatsapp-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
 }

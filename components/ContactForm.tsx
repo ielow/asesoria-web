@@ -379,8 +379,8 @@ export default function ContactForm() {
                       style: {
                         backdropFilter: 'blur(30px)',
                         WebkitBackdropFilter: 'blur(30px)',
-                        background: 'rgba(255, 255, 255, 0.4)',
-                        border: '1px solid rgba(255, 255, 255, 0.5)',
+                        background: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2)) padding-box, linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%) border-box',
+                        border: '1px solid transparent',
                         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.15)',
                         padding: '8px',
                       }

@@ -96,7 +96,16 @@ export default function HeroBanner() {
           }}
         >
           {t('titlePart1')}{' '}
-          <span style={{ color: 'var(--brand-secondary)' }}>{t('titleHighlight')}</span>{' '}
+          <span style={{ 
+            backgroundColor: 'var(--brand-secondary)',
+            color: 'white',
+            fontWeight: '700',
+            padding: '4px 12px',
+            borderRadius: '12px',
+            display: 'inline-block'
+          }}>
+            {t('titleHighlight')}
+          </span>{' '}
           {t('titlePart2')}
         </Heading>
         <Paragraph
