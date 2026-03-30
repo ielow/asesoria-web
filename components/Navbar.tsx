@@ -22,7 +22,6 @@ export default function Navbar() {
   return (
     <>
       <Header
-        background="rgba(255, 255, 255, 0.9)"
         pad={{ horizontal: isMobile ? 'medium' : 'large', vertical: 'small' }}
         style={{
           position: 'fixed',
@@ -33,10 +32,12 @@ export default function Navbar() {
           height: '80px',
           maxWidth: '1200px',
           zIndex: 1000,
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
+          background: 'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)) padding-box, linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%) border-box',
+          backdropFilter: 'blur(20px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(20px) saturate(180%)',
           borderRadius: '50px',
-          boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+          border: '1px solid transparent',
+          boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
         }}
       >
         <Box direction="row" align="center" gap="small">
@@ -111,8 +112,10 @@ export default function Navbar() {
           onClickOutside={() => setShowMobileMenu(false)}
           onEsc={() => setShowMobileMenu(false)}
           style={{
-            background: 'rgba(255, 255, 255, 0.98)',
-            backdropFilter: 'blur(15px)',
+            background: 'linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)) padding-box, linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%) border-box',
+            border: '1px solid transparent',
+            backdropFilter: 'blur(30px) saturate(200%)',
+            WebkitBackdropFilter: 'blur(30px) saturate(200%)',
             zIndex: 900,
           }}
         >

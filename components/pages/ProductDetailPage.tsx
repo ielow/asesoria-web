@@ -26,7 +26,7 @@ export default function ProductDetailPage({ slug }: ProductDetailPageProps) {
             {/* Background Elements */}
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <div className={`absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-b ${product.color} opacity-10 rounded-full blur-[100px] transform translate-x-1/3 -translate-y-1/3`}></div>
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-900/20 rounded-full blur-[80px] transform -translate-x-1/3 translate-y-1/3"></div>
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#7C3AED]/20 rounded-full blur-[80px] transform -translate-x-1/3 translate-y-1/3"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-[120px] pb-12 lg:pb-20">

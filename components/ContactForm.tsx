@@ -254,7 +254,7 @@ export default function ContactForm() {
                 textAlign={isMobile ? 'center' : 'start'}
                 style={{ fontStyle: 'italic' }}
               >
-                "{t('quote')}"
+                &quot;{t('quote')}&quot;
               </Paragraph>
             </Box>
           </Box>
@@ -279,7 +279,7 @@ export default function ContactForm() {
             >
               <Box gap="small" style={{ fontSize: '12.8px' }}>
                 <Box>
-                  <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                  <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                     {t('form.nameLabel')}
                   </label>
                   <TextInput
@@ -292,14 +292,14 @@ export default function ContactForm() {
                     }}
                   />
                   {fieldErrors.nombre && (
-                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                       {fieldErrors.nombre}
                     </p>
                   )}
                 </Box>
 
                 <Box>
-                  <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                  <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                     {t('form.emailLabel')}
                   </label>
                   <TextInput
@@ -313,14 +313,14 @@ export default function ContactForm() {
                     }}
                   />
                   {fieldErrors.email && (
-                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                       {fieldErrors.email}
                     </p>
                   )}
                 </Box>
 
                 <Box>
-                  <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                  <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                     {t('form.phoneLabel')}
                   </label>
                   <TextInput
@@ -334,14 +334,14 @@ export default function ContactForm() {
                     }}
                   />
                   {fieldErrors.telefono && (
-                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                       {fieldErrors.telefono}
                     </p>
                   )}
                 </Box>
 
                 <Box>
-                  <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                  <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                     {t('form.companyLabel')}
                   </label>
                   <TextInput
@@ -354,14 +354,14 @@ export default function ContactForm() {
                     }}
                   />
                   {fieldErrors.empresa && (
-                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                       {fieldErrors.empresa}
                     </p>
                   )}
                 </Box>
 
                 <Box>
-                  <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
+                  <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
                     {t('form.consultTypeLabel')}
                   </label>
                   <Select
@@ -373,17 +373,44 @@ export default function ContactForm() {
                       borderColor: getBorderColor('tipoConsulta'),
                       borderWidth: '2px'
                     }}
+                    dropProps={{
+                      elevation: 'large',
+                      round: '16px',
+                      style: {
+                        backdropFilter: 'blur(30px)',
+                        WebkitBackdropFilter: 'blur(30px)',
+                        background: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2)) padding-box, linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%) border-box',
+                        border: '1px solid transparent',
+                        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.15)',
+                        padding: '8px',
+                      }
+                    }}
+                    children={(option, index, options, { active, selected }) => (
+                      <Box
+                        pad={{ horizontal: 'small', vertical: 'small' }}
+                        style={{
+                          background: active ? 'rgba(255, 255, 255, 0.6)' : 'transparent',
+                          transition: 'all 0.2s ease',
+                          borderRadius: '8px',
+                          color: selected ? '#7C3AED' : '#1a1a1a',
+                          fontWeight: selected ? 'bold' : (active ? '500' : 'normal'),
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {option}
+                      </Box>
+                    )}
                   />
                   {fieldErrors.tipoConsulta && (
-                    <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                    <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                       {fieldErrors.tipoConsulta}
                     </p>
                   )}
                 </Box>
 
                 <Box>
-                  <label style={{ fontSize: '10.24px', marginBottom: '4px', display: 'block', color: '#374151', fontWeight: '500' }}>
-                    {t('form.messageLabel')} <span style={{ color: '#9ca3af', fontWeight: 'normal' }}>(Opcional)</span>
+                  <label className="text-[10.24px] mb-1 block text-gray-700 font-medium">
+                    {t('form.messageLabel')} <span className="text-gray-400 font-normal">(Opcional)</span>
                   </label>
                   <TextArea
                     name="mensaje"
@@ -428,7 +455,7 @@ export default function ContactForm() {
                   </span>
                 </Box>
                 {fieldErrors.privacyAccepted && (
-                  <p style={{ fontSize: '10.24px', color: '#ef4444', marginTop: '4px', marginBottom: '0' }}>
+                  <p className="text-[10.24px] text-red-500 mt-1 mb-0">
                     {fieldErrors.privacyAccepted}
                   </p>
                 )}
@@ -438,19 +465,11 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  className="form-button w-full bg-[#7C3AED] text-white font-bold py-3 px-6 rounded-xl transition-colors"
                   style={{
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    border: 'none',
-                    borderRadius: '12px',
-                    padding: '12.8px 25.6px',
-                    fontWeight: 'bold',
-                    fontSize: '12.8px',
-                    width: '100%',
                     cursor: isSubmitting ? 'not-allowed' : 'pointer',
                     opacity: isSubmitting ? 0.7 : 1,
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
-                    color: 'white'
+                    fontSize: '12.8px'
                   }}
                 >
                   {isSubmitting ? 'ENVIANDO...' : 'ENVIAR'}
